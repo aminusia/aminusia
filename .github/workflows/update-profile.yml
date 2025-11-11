@@ -13,13 +13,14 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  metadata: read
+
 jobs:
   update-profile:
     runs-on: ubuntu-latest
     
-    permissions:
-      contents: write
-      metadata: read
     
     steps:
       - name: Checkout repository
