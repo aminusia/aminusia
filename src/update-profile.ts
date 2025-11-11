@@ -22,6 +22,7 @@ interface RepoStats {
   totalBytes: number;
   platforms: PlatformStats;
   databases: DatabaseStats;
+  activities: { [month: string]: number };
 }
 
 async function fetchRepositoryStats(): Promise<RepoStats> {
@@ -44,6 +45,7 @@ async function fetchRepositoryStats(): Promise<RepoStats> {
     totalBytes: 0,
     platforms: {},
     databases: {},
+    activities: {},
   };
 
   // Fetch all repositories (user + organization repos)
@@ -86,6 +88,8 @@ async function fetchRepositoryStats(): Promise<RepoStats> {
 
         // Detect platforms and databases
         await detectPlatformsAndDatabases(octokit, repo.owner.login, repo.name, stats);
+  // Aggregate commit activity for this repository (weekly -> monthly)
+  await aggregateRepoCommitActivity(octokit, repo.owner.login, repo.name, stats);
       } catch (error) {
         console.warn(`Failed to fetch data for ${repo.full_name}:`, error);
       }
@@ -95,6 +99,153 @@ async function fetchRepositoryStats(): Promise<RepoStats> {
   }
 
   return stats;
+}
+
+async function aggregateRepoCommitActivity(
+  octokit: Octokit,
+  owner: string,
+  repo: string,
+  stats: RepoStats
+): Promise<void> {
+  try {
+    // Try the lightweight stats endpoint first (GitHub returns weekly totals for the last year).
+    const response = await octokit.request('GET /repos/{owner}/{repo}/stats/commit_activity', {
+      owner,
+      repo,
+    });
+
+    const weeks = response.data as Array<{ week: number; total: number; days: number[] }>;
+
+    // If GitHub returns 202 (computing) or empty/invalid data, fall back to scanning the full commit history.
+    if (!Array.isArray(weeks) || weeks.length === 0) {
+      await aggregateRepoCommitHistory(octokit, owner, repo, stats);
+      return;
+    }
+
+    for (const w of weeks) {
+      // week is a unix timestamp (seconds) for start of week
+      const dt = new Date((w.week as number) * 1000);
+      const monthKey = `${dt.getUTCFullYear()}-${String(dt.getUTCMonth() + 1).padStart(2, '0')}`; // YYYY-MM
+      stats.activities[monthKey] = (stats.activities[monthKey] || 0) + (w.total as number);
+    }
+  } catch (error) {
+    // If any error occurs (including 202 responses), fall back to scanning the full commit history.
+    await aggregateRepoCommitHistory(octokit, owner, repo, stats);
+  }
+}
+
+async function aggregateRepoCommitHistory(
+  octokit: Octokit,
+  owner: string,
+  repo: string,
+  stats: RepoStats
+): Promise<void> {
+  try {
+    const perPage = 100;
+    let page = 1;
+    while (true) {
+      const response = await octokit.repos.listCommits({
+        owner,
+        repo,
+        per_page: perPage,
+        page,
+      });
+
+      const commits = response.data as Array<any>;
+      if (!Array.isArray(commits) || commits.length === 0) break;
+
+      for (const c of commits) {
+        // Prefer authored date, fall back to committer date
+        const dateStr = c.commit?.author?.date || c.commit?.committer?.date;
+        if (!dateStr) continue;
+        const dt = new Date(dateStr);
+        if (isNaN(dt.getTime())) continue;
+        const monthKey = `${dt.getUTCFullYear()}-${String(dt.getUTCMonth() + 1).padStart(2, '0')}`;
+        stats.activities[monthKey] = (stats.activities[monthKey] || 0) + 1;
+      }
+
+      // If fewer than perPage commits were returned, we've reached the end
+      if (commits.length < perPage) break;
+      page++;
+
+      // Small delay to be polite to the API (helps with rate limits)
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+  } catch (error) {
+    // If anything fails, skip activity aggregation for this repo.
+  }
+}
+
+function generateBarChartSVG(
+  data: Array<{ name: string; value: number }>,
+  title: string,
+  barColor = '#16a34a'
+): string {
+  const width = 800;
+  const height = 260;
+  const padding = { top: 40, right: 30, bottom: 50, left: 50 };
+  const chartWidth = width - padding.left - padding.right;
+  const chartHeight = height - padding.top - padding.bottom;
+
+  if (data.length === 0) {
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">
+      <text x="${width / 2}" y="${height / 2}" text-anchor="middle" font-family="Arial" font-size="16" fill="#666">No data available</text>
+    </svg>`;
+  }
+
+  const maxVal = Math.max(...data.map(d => d.value));
+  const barWidth = chartWidth / data.length * 0.75;
+  const gap = chartWidth / data.length * 0.25;
+
+  let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+  <style>
+    .chart-title { font: bold 18px Arial; fill: #333; }
+    .axis-label { font: 12px Arial; fill: #666; }
+  </style>
+  <text x="${width / 2}" y="20" text-anchor="middle" class="chart-title">${title}</text>
+  <g transform="translate(${padding.left}, ${padding.top})">
+`;
+
+  // Bars
+  data.forEach((d, i) => {
+    const x = i * (barWidth + gap);
+    const h = maxVal > 0 ? (d.value / maxVal) * chartHeight : 0;
+    const y = chartHeight - h;
+    svg += `    <rect x="${x}" y="${y}" width="${barWidth}" height="${h}" fill="${barColor}" rx="3" />\n`;
+    // month label
+    svg += `    <text x="${x + barWidth / 2}" y="${chartHeight + 18}" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">${d.name}</text>\n`;
+  });
+
+  // Y axis labels (0 and max)
+  svg += `    <text x="-6" y="${chartHeight}" font-family="Arial" font-size="11" fill="#666" text-anchor="end">0</text>\n`;
+  svg += `    <text x="-6" y="${10}" font-family="Arial" font-size="11" fill="#666" text-anchor="end">${maxVal}</text>\n`;
+
+  svg += '  </g>\n</svg>';
+
+  return svg;
+}
+
+function generateActivitiesChart(stats: RepoStats): string {
+  // Determine the last 12 months (YYYY-MM) in chronological order
+  const months: string[] = [];
+  const now = new Date();
+  for (let i = 11; i >= 0; i--) {
+    const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - i, 1));
+    months.push(`${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}`);
+  }
+
+  const data = months.map(m => ({ name: m, value: stats.activities[m] || 0 }));
+
+  // Convert month names to shorter labels for display (e.g., '2024-11' -> 'Nov')
+  const labels = data.map(d => {
+    const [y, mm] = d.name.split('-');
+    const dt = new Date(Number(y), Number(mm) - 1, 1);
+    return dt.toLocaleString('en-US', { month: 'short' });
+  });
+
+  const chartData = data.map((d, i) => ({ name: labels[i], value: d.value }));
+
+  return generateBarChartSVG(chartData, 'Activities — Monthly Commits (last 12 months)', '#16a34a');
 }
 
 async function detectPlatformsAndDatabases(
@@ -397,6 +548,12 @@ function generateStatsMarkdown(stats: RepoStats): string {
     markdown += '</p>\n\n';
   }
 
+  // Activities chart (monthly commits)
+  markdown += '### 📈 Activities\n\n';
+  markdown += '<p align="center">\n';
+  markdown += '  <img src="./activities.svg" alt="Monthly Commits (last 12 months)" width="800"/>\n';
+  markdown += '</p>\n\n';
+
   markdown += `\n*Last updated: ${new Date().toUTCString()}*\n`;
 
   return markdown;
@@ -454,6 +611,9 @@ async function main(): Promise<void> {
     
     const databaseSVG = generateDatabaseChart(stats);
     saveSVGFile('databases.svg', databaseSVG);
+
+  const activitiesSVG = generateActivitiesChart(stats);
+  saveSVGFile('activities.svg', activitiesSVG);
     
     // Generate and update README
     const statsMarkdown = generateStatsMarkdown(stats);

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="260" viewBox="0 0 800 260">
+  <style>
+    .chart-title { font: bold 18px Arial; fill: #333; }
+    .axis-label { font: 12px Arial; fill: #666; }
+  </style>
+  <text x="400" y="20" text-anchor="middle" class="chart-title">Activities — Monthly Commits (last 12 months)</text>
+  <g transform="translate(50, 40)">
+    <rect x="0" y="170" width="45" height="0" fill="#16a34a" rx="3" />
+    <text x="22.5" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
+    <rect x="60" y="170" width="45" height="0" fill="#16a34a" rx="3" />
+    <text x="82.5" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
+    <rect x="120" y="170" width="45" height="0" fill="#16a34a" rx="3" />
+    <text x="142.5" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
+    <rect x="180" y="170" width="45" height="0" fill="#16a34a" rx="3" />
+    <text x="202.5" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
+    <rect x="240" y="170" width="45" height="0" fill="#16a34a" rx="3" />
+    <text x="262.5" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
+    <rect x="300" y="155.83333333333334" width="45" height="14.166666666666666" fill="#16a34a" rx="3" />
+    <text x="322.5" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
+    <rect x="360" y="170" width="45" height="0" fill="#16a34a" rx="3" />
+    <text x="382.5" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
+    <rect x="420" y="170" width="45" height="0" fill="#16a34a" rx="3" />
+    <text x="442.5" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
+    <rect x="480" y="170" width="45" height="0" fill="#16a34a" rx="3" />
+    <text x="502.5" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
+    <rect x="540" y="170" width="45" height="0" fill="#16a34a" rx="3" />
+    <text x="562.5" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
+    <rect x="600" y="170" width="45" height="0" fill="#16a34a" rx="3" />
+    <text x="622.5" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
+    <rect x="660" y="0" width="45" height="170" fill="#16a34a" rx="3" />
+    <text x="682.5" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
+    <text x="-6" y="170" font-family="Arial" font-size="11" fill="#666" text-anchor="end">0</text>
+    <text x="-6" y="10" font-family="Arial" font-size="11" fill="#666" text-anchor="end">24</text>
+  </g>
+</svg>
