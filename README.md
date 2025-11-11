@@ -1,5 +1,10 @@
 ## Hi there 👋
 
+I'm a developer passionate about creating amazing things with code!
+
+<!-- STATS:START -->
+<!-- STATS:END -->
+
 <!--
 **aminusia/aminusia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
