@@ -226,17 +226,41 @@ function generateBarChartSVG(
 }
 
 function generateActivitiesChart(stats: RepoStats): string {
-  // Get all months from activities and sort chronologically
-  const months: string[] = Object.keys(stats.activities).sort();
+  // Build a continuous list of months starting from the first month that has activity
+  // up to the last month that has activity. Fill gaps with zero values so empty
+  // months are rendered as empty bars. Do not render months prior to the first
+  // month that contains activity.
+  const keys = Object.keys(stats.activities).sort();
 
-  const data = months.map(m => ({ name: m, value: stats.activities[m] || 0 }));
+  if (keys.length === 0) {
+    return generateBarChartSVG([], 'All Time Monthly Commits', '#16a34a');
+  }
 
-  // Convert month names to labels: only show year on January, otherwise empty
-  // e.g. '2024-01' -> '2024', '2024-02' -> ''
+  const first = keys[0];
+  const last = keys[keys.length - 1];
+
+  const [startY, startM] = first.split('-').map(s => Number(s));
+  const [endY, endM] = last.split('-').map(s => Number(s));
+
+  const months: string[] = [];
+  let y = startY;
+  let m = startM;
+
+  while (y < endY || (y === endY && m <= endM)) {
+    months.push(`${y}-${String(m).padStart(2, '0')}`);
+    m++;
+    if (m > 12) {
+      m = 1;
+      y++;
+    }
+  }
+
+  const data = months.map(monthKey => ({ name: monthKey, value: stats.activities[monthKey] || 0 }));
+
+  // Labels: only show the year on January, otherwise empty
   const labels = data.map(d => {
-    const [y, mm] = d.name.split('-');
-    if (mm === '01') return y;
-    return '';
+    const [yy, mm] = d.name.split('-');
+    return mm === '01' ? yy : '';
   });
 
   const chartData = data.map((d, i) => ({ name: labels[i], value: d.value }));
@@ -520,10 +544,10 @@ function generateStatsMarkdown(stats: RepoStats): string {
   let markdown = '## 📊 GitHub Statistics\n\n';
 
   markdown += '### Repository Overview\n\n';
+  markdown += `**Total Repositories:** ${stats.totalRepos} | **Public:** ${stats.publicRepos} | **Private:** ${stats.privateRepos}\n\n`;
   markdown += '<p align="center">\n';
   markdown += '  <img src="./repo-stats.svg" alt="Repository Statistics" width="500"/>\n';
   markdown += '</p>\n\n';
-  markdown += `**Total Repositories:** ${stats.totalRepos} | **Public:** ${stats.publicRepos} | **Private:** ${stats.privateRepos}\n\n`;
 
   markdown += '### 💻 Programming Languages\n\n';
   markdown += '<p align="center">\n';

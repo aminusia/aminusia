@@ -4,7 +4,7 @@ I'm a developer passionate about creating amazing things with code!
 
 ### 🚀 About This Profile
 
-This profile automatically updates daily with statistics about my repositories and coding languages. The automation is powered by TypeScript and GitHub Actions.
+This profile automatically updates weekly with statistics about my repositories and coding languages. The automation is powered by TypeScript and GitHub Actions.
 
 Want to create your own? Check out the [documentation](DOCUMENTATION.md) to learn how!
 
@@ -13,11 +13,11 @@ Want to create your own? Check out the [documentation](DOCUMENTATION.md) to lear
 
 ### Repository Overview
 
+**Total Repositories:** 125 | **Public:** 32 | **Private:** 93
+
 <p align="center">
   <img src="./repo-stats.svg" alt="Repository Statistics" width="500"/>
 </p>
-
-**Total Repositories:** 125 | **Public:** 32 | **Private:** 93
 
 ### 💻 Programming Languages
 
