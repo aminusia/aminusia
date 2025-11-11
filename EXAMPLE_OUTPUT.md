@@ -1,6 +1,6 @@
 # Example Output
 
-This file shows what your README.md will look like after the script runs.
+This file shows what your README.md will look like after the script runs with SVG donut charts.
 
 ## Hi there 👋
 
@@ -9,51 +9,65 @@ I'm a developer passionate about creating amazing things with code!
 <!-- STATS:START -->
 ## 📊 Repository Statistics
 
-- **Total Repositories:** 42
-- **Public Repositories:** 35
-- **Private Repositories:** 7
+<div align="center">
+
+[SVG Donut Chart showing Public vs Private Repository Distribution]
+
+</div>
+
+- **Total Repositories:** 123
+- **Public Repositories:** 32
+- **Private Repositories:** 91
 
 ## 💻 Language Distribution
 
-**TypeScript** 35.42% ████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+<div align="center">
 
-**JavaScript** 28.17% ██████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+[SVG Donut Chart showing Top 10 Programming Languages]
 
-**Python** 15.83% ███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-**Go** 8.25% ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-**Java** 5.67% ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-**Rust** 3.21% █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-**HTML** 1.89% ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-**CSS** 1.02% ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-**Shell** 0.35% ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-**Dockerfile** 0.19% ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+</div>
 
 <details>
 <summary>📈 Complete Language Breakdown</summary>
 
 | Language | Percentage | Bytes |
 |----------|------------|-------|
-| TypeScript | 35.42% | 1,234,567 |
-| JavaScript | 28.17% | 982,345 |
-| Python | 15.83% | 551,892 |
-| Go | 8.25% | 287,654 |
-| Java | 5.67% | 197,432 |
-| Rust | 3.21% | 111,789 |
-| HTML | 1.89% | 65,897 |
-| CSS | 1.02% | 35,612 |
-| Shell | 0.35% | 12,203 |
-| Dockerfile | 0.19% | 6,621 |
+| PHP | 53.44% | 173,200,899 |
+| JavaScript | 17.67% | 57,274,273 |
+| Python | 5.51% | 17,845,017 |
+| CSS | 4.79% | 15,516,481 |
+| HTML | 4.47% | 14,487,999 |
+| Blade | 3.36% | 10,879,801 |
+| TypeScript | 3.23% | 10,472,267 |
+| Vue | 2.02% | 6,539,394 |
+| C | 0.98% | 3,188,510 |
+| C++ | 0.93% | 3,002,162 |
 
 </details>
 
-*Last updated: Mon, 11 Nov 2024 08:37:45 GMT*
+## 🔧 Framework & Technology Statistics
+
+<div align="center">
+
+[SVG Donut Chart showing Frameworks and Technologies]
+
+</div>
+
+<details>
+<summary>📊 Framework Details</summary>
+
+| Framework/Technology | Repository Count |
+|----------------------|-----------------|
+| Node.js | 45 |
+| Laravel | 18 |
+| Vue.js | 12 |
+| MySQL | 15 |
+| React | 8 |
+| MongoDB | 6 |
+
+</details>
+
+*Last updated: Mon, 11 Nov 2025 12:00:00 GMT*
 <!-- STATS:END -->
 
 <!--

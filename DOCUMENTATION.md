@@ -4,19 +4,22 @@ This project automatically updates your GitHub profile README with statistics ab
 
 ## Features
 
-- 📊 **Repository Statistics**: Shows total, public, and private repository counts
-- 💻 **Language Distribution**: Displays programming language percentages across all repositories
+- 📊 **Repository Statistics**: Shows total, public, and private repository counts with SVG donut charts
+- 💻 **Language Distribution**: Displays programming language percentages across all repositories with interactive SVG donut charts
+- 🔧 **Framework Detection**: Automatically detects and displays frameworks/technologies used (Laravel, Node.js, Vue.js, React, Django, MongoDB, MySQL, etc.)
 - 🔄 **Automatic Updates**: Runs daily via GitHub Actions
-- 📈 **Visual Charts**: Progress bars for top languages
-- 📋 **Detailed Breakdown**: Collapsible table with complete language statistics
+- 📈 **Visual Charts**: Beautiful SVG donut charts for all statistics
+- 📋 **Detailed Breakdown**: Collapsible tables with complete statistics
 
 ## How It Works
 
 1. The TypeScript script fetches all repositories you have access to (owned, collaborated, or organization member)
 2. It aggregates language statistics from the GitHub API
-3. Calculates percentages based on total bytes of code
-4. Updates the README.md file with formatted statistics
-5. GitHub Actions commits the changes automatically
+3. Detects frameworks and technologies by analyzing package.json, composer.json, requirements.txt, and other configuration files
+4. Calculates percentages based on total bytes of code and framework usage
+5. Generates beautiful SVG donut charts for visual representation
+6. Updates the README.md file with formatted statistics and charts
+7. GitHub Actions commits the changes automatically
 
 ## Quick Start
 
@@ -105,19 +108,29 @@ Examples:
 
 ### Top Languages Display
 
-Edit `src/update-profile.ts` to change how many languages are shown:
+Edit `src/update-profile.ts` to change how many languages are shown in the donut chart:
 
 ```typescript
 const topLanguages = languages.slice(0, 10); // Change 10 to desired number
 ```
 
-### Visual Bar Length
+### Framework Detection
 
-Adjust the progress bar scaling:
+The script automatically detects the following frameworks and technologies:
+- **PHP**: Laravel
+- **JavaScript/TypeScript**: Node.js, Next.js, Vue.js, React, Angular, Express, NestJS
+- **Python**: Django, Flask, FastAPI
+- **Java**: Spring Boot
+- **Databases**: MySQL, PostgreSQL, MongoDB, Redis
 
-```typescript
-const barLength = Math.round(percentage / 2); // Change divisor for different scales
-```
+To add more frameworks, edit the `FRAMEWORK_PATTERNS` object in `src/update-profile.ts`.
+
+### SVG Chart Customization
+
+You can customize the SVG charts by modifying the `generateDonutChart` function:
+- Chart dimensions: Change `width` and `height` parameters
+- Colors: Modify the `COLORS` array
+- Inner radius: Adjust `innerRadius = radius * 0.6` (0.6 = 60% of outer radius)
 
 ## Project Structure
 
@@ -140,6 +153,7 @@ const barLength = Math.round(percentage / 2); // Change divisor for different sc
 - **Octokit**: Official GitHub REST API client
 - **GitHub Actions**: Automated workflow execution
 - **Node.js**: Runtime environment
+- **SVG**: Scalable Vector Graphics for beautiful, responsive charts
 
 ## Security
 
