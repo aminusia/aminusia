@@ -88,8 +88,8 @@ async function fetchRepositoryStats(): Promise<RepoStats> {
 
         // Detect platforms and databases
         await detectPlatformsAndDatabases(octokit, repo.owner.login, repo.name, stats);
-        // Aggregate commit activity for this repository (weekly -> monthly)
-        await aggregateRepoCommitActivity(octokit, repo.owner.login, repo.name, stats);
+        // Aggregate commit activity for this repository (only commits by the authenticated user)
+        await aggregateRepoCommitActivity(octokit, repo.owner.login, repo.name, user.login, stats);
       } catch (error) {
         console.warn(`Failed to fetch data for ${repo.full_name}:`, error);
       }
@@ -105,39 +105,19 @@ async function aggregateRepoCommitActivity(
   octokit: Octokit,
   owner: string,
   repo: string,
+  author: string,
   stats: RepoStats
 ): Promise<void> {
-  try {
-    // Try the lightweight stats endpoint first (GitHub returns weekly totals for the last year).
-    const response = await octokit.request('GET /repos/{owner}/{repo}/stats/commit_activity', {
-      owner,
-      repo,
-    });
-
-    const weeks = response.data as Array<{ week: number; total: number; days: number[] }>;
-
-    // If GitHub returns 202 (computing) or empty/invalid data, fall back to scanning the full commit history.
-    if (!Array.isArray(weeks) || weeks.length === 0) {
-      await aggregateRepoCommitHistory(octokit, owner, repo, stats);
-      return;
-    }
-
-    for (const w of weeks) {
-      // week is a unix timestamp (seconds) for start of week
-      const dt = new Date((w.week as number) * 1000);
-      const monthKey = `${dt.getUTCFullYear()}-${String(dt.getUTCMonth() + 1).padStart(2, '0')}`; // YYYY-MM
-      stats.activities[monthKey] = (stats.activities[monthKey] || 0) + (w.total as number);
-    }
-  } catch (error) {
-    // If any error occurs (including 202 responses), fall back to scanning the full commit history.
-    await aggregateRepoCommitHistory(octokit, owner, repo, stats);
-  }
+  // The commit_activity endpoint doesn't support filtering by author,
+  // so we always use the full commit history scan with author filter.
+  await aggregateRepoCommitHistory(octokit, owner, repo, author, stats);
 }
 
 async function aggregateRepoCommitHistory(
   octokit: Octokit,
   owner: string,
   repo: string,
+  author: string,
   stats: RepoStats
 ): Promise<void> {
   try {
@@ -147,6 +127,7 @@ async function aggregateRepoCommitHistory(
       const response = await octokit.repos.listCommits({
         owner,
         repo,
+        author, // Filter commits by the authenticated user
         per_page: perPage,
         page,
       });
