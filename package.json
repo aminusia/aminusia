@@ -1,0 +1,20 @@
+{
+  "name": "aminusia",
+  "version": "1.0.0",
+  "description": "<!-- **aminusia/aminusia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "update-profile": "ts-node src/update-profile.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/rest": "^22.0.1",
+    "@types/node": "^24.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
