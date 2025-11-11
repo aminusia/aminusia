@@ -1,439 +1,253 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="260" viewBox="0 0 800 260">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
   <style>
     .chart-title { font: bold 18px Arial; fill: #333; }
-    .axis-label { font: 12px Arial; fill: #666; }
+    .axis-label { font: 10px Arial; fill: #666; }
   </style>
-  <text x="400" y="20" text-anchor="middle" class="chart-title">Activities — Monthly Commits (all time)</text>
+  <text x="400" y="20" text-anchor="middle" class="chart-title">All Time Monthly Commits</text>
   <g transform="translate(50, 40)">
-    <rect x="0" y="162.2610015174507" width="2.5233644859813085" height="7.7389984825493165" fill="#16a34a" rx="3" />
-    <text x="1.2616822429906542" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="3.364485981308411" y="163.29286798179058" width="2.5233644859813085" height="6.707132018209408" fill="#16a34a" rx="3" />
-    <text x="4.626168224299065" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="6.728971962616822" y="165.87253414264038" width="2.5233644859813085" height="4.127465857359636" fill="#16a34a" rx="3" />
-    <text x="7.990654205607477" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="10.093457943925234" y="167.93626707132017" width="2.5233644859813085" height="2.063732928679818" fill="#16a34a" rx="3" />
-    <text x="11.355140186915888" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="13.457943925233645" y="168.19423368740516" width="2.5233644859813085" height="1.8057663125948407" fill="#16a34a" rx="3" />
-    <text x="14.719626168224298" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="16.822429906542055" y="168.19423368740516" width="2.5233644859813085" height="1.8057663125948407" fill="#16a34a" rx="3" />
-    <text x="18.08411214953271" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="20.186915887850468" y="166.38846737481032" width="2.5233644859813085" height="3.6115326251896813" fill="#16a34a" rx="3" />
-    <text x="21.448598130841123" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="23.551401869158877" y="168.45220030349014" width="2.5233644859813085" height="1.5477996965098635" fill="#16a34a" rx="3" />
-    <text x="24.813084112149532" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="26.91588785046729" y="164.84066767830046" width="2.5233644859813085" height="5.159332321699545" fill="#16a34a" rx="3" />
-    <text x="28.177570093457945" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="30.2803738317757" y="165.3566009104704" width="2.5233644859813085" height="4.6433990895295905" fill="#16a34a" rx="3" />
-    <text x="31.542056074766357" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="33.64485981308411" y="164.84066767830046" width="2.5233644859813085" height="5.159332321699545" fill="#16a34a" rx="3" />
-    <text x="34.90654205607476" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="37.00934579439252" y="169.22610015174507" width="2.5233644859813085" height="0.7738998482549317" fill="#16a34a" rx="3" />
-    <text x="38.271028037383175" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="40.373831775700936" y="169.22610015174507" width="2.5233644859813085" height="0.7738998482549317" fill="#16a34a" rx="3" />
-    <text x="41.63551401869159" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="43.73831775700935" y="169.22610015174507" width="2.5233644859813085" height="0.7738998482549317" fill="#16a34a" rx="3" />
-    <text x="45" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="47.10280373831775" y="168.45220030349014" width="2.5233644859813085" height="1.5477996965098635" fill="#16a34a" rx="3" />
-    <text x="48.364485981308405" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="50.467289719626166" y="167.93626707132017" width="2.5233644859813085" height="2.063732928679818" fill="#16a34a" rx="3" />
-    <text x="51.72897196261682" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="53.83177570093458" y="169.22610015174507" width="2.5233644859813085" height="0.7738998482549317" fill="#16a34a" rx="3" />
-    <text x="55.09345794392523" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="57.19626168224299" y="168.45220030349014" width="2.5233644859813085" height="1.5477996965098635" fill="#16a34a" rx="3" />
-    <text x="58.45794392523364" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="60.5607476635514" y="167.42033383915023" width="2.5233644859813085" height="2.5796661608497726" fill="#16a34a" rx="3" />
-    <text x="61.822429906542055" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="63.92523364485981" y="169.74203338391501" width="2.5233644859813085" height="0.25796661608497723" fill="#16a34a" rx="3" />
-    <text x="65.18691588785046" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="67.28971962616822" y="169.22610015174507" width="2.5233644859813085" height="0.7738998482549317" fill="#16a34a" rx="3" />
-    <text x="68.55140186915888" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="70.65420560747664" y="169.74203338391501" width="2.5233644859813085" height="0.25796661608497723" fill="#16a34a" rx="3" />
-    <text x="71.9158878504673" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="74.01869158878505" y="169.74203338391501" width="2.5233644859813085" height="0.25796661608497723" fill="#16a34a" rx="3" />
-    <text x="75.2803738317757" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="77.38317757009345" y="169.74203338391501" width="2.5233644859813085" height="0.25796661608497723" fill="#16a34a" rx="3" />
-    <text x="78.64485981308411" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="80.74766355140187" y="169.74203338391501" width="2.5233644859813085" height="0.25796661608497723" fill="#16a34a" rx="3" />
-    <text x="82.00934579439253" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="84.11214953271028" y="168.19423368740516" width="2.5233644859813085" height="1.8057663125948407" fill="#16a34a" rx="3" />
-    <text x="85.37383177570094" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="87.4766355140187" y="169.48406676783006" width="2.5233644859813085" height="0.5159332321699545" fill="#16a34a" rx="3" />
-    <text x="88.73831775700936" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="90.8411214953271" y="167.93626707132017" width="2.5233644859813085" height="2.063732928679818" fill="#16a34a" rx="3" />
-    <text x="92.10280373831776" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="94.2056074766355" y="169.22610015174507" width="2.5233644859813085" height="0.7738998482549317" fill="#16a34a" rx="3" />
-    <text x="95.46728971962617" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="97.57009345794393" y="169.22610015174507" width="2.5233644859813085" height="0.7738998482549317" fill="#16a34a" rx="3" />
-    <text x="98.83177570093459" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="100.93457943925233" y="169.48406676783006" width="2.5233644859813085" height="0.5159332321699545" fill="#16a34a" rx="3" />
-    <text x="102.19626168224299" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="104.29906542056075" y="169.74203338391501" width="2.5233644859813085" height="0.25796661608497723" fill="#16a34a" rx="3" />
-    <text x="105.56074766355141" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="107.66355140186916" y="164.3247344461305" width="2.5233644859813085" height="5.675265553869499" fill="#16a34a" rx="3" />
-    <text x="108.92523364485982" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="111.02803738317756" y="169.48406676783006" width="2.5233644859813085" height="0.5159332321699545" fill="#16a34a" rx="3" />
-    <text x="112.28971962616822" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="114.39252336448598" y="169.22610015174507" width="2.5233644859813085" height="0.7738998482549317" fill="#16a34a" rx="3" />
-    <text x="115.65420560747664" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="117.75700934579439" y="169.74203338391501" width="2.5233644859813085" height="0.25796661608497723" fill="#16a34a" rx="3" />
-    <text x="119.01869158878505" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="121.1214953271028" y="169.48406676783006" width="2.5233644859813085" height="0.5159332321699545" fill="#16a34a" rx="3" />
-    <text x="122.38317757009347" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="124.48598130841121" y="169.74203338391501" width="2.5233644859813085" height="0.25796661608497723" fill="#16a34a" rx="3" />
-    <text x="125.74766355140187" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="127.85046728971962" y="168.19423368740516" width="2.5233644859813085" height="1.8057663125948407" fill="#16a34a" rx="3" />
-    <text x="129.11214953271028" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="131.21495327102804" y="169.74203338391501" width="2.5233644859813085" height="0.25796661608497723" fill="#16a34a" rx="3" />
-    <text x="132.47663551401868" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="134.57943925233644" y="169.22610015174507" width="2.5233644859813085" height="0.7738998482549317" fill="#16a34a" rx="3" />
-    <text x="135.8411214953271" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="137.94392523364485" y="168.45220030349014" width="2.5233644859813085" height="1.5477996965098635" fill="#16a34a" rx="3" />
-    <text x="139.2056074766355" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="141.30841121495328" y="166.13050075872533" width="2.5233644859813085" height="3.8694992412746583" fill="#16a34a" rx="3" />
-    <text x="142.57009345794393" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="144.6728971962617" y="164.58270106221548" width="2.5233644859813085" height="5.417298937784522" fill="#16a34a" rx="3" />
-    <text x="145.93457943925233" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="148.0373831775701" y="101.38088012139606" width="2.5233644859813085" height="68.61911987860394" fill="#16a34a" rx="3" />
-    <text x="149.29906542056074" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="151.4018691588785" y="60.62215477996966" width="2.5233644859813085" height="109.37784522003034" fill="#16a34a" rx="3" />
-    <text x="152.66355140186914" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="154.7663551401869" y="15.993930197268583" width="2.5233644859813085" height="154.00606980273142" fill="#16a34a" rx="3" />
-    <text x="156.02803738317755" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="158.13084112149534" y="47.72382397572079" width="2.5233644859813085" height="122.27617602427921" fill="#16a34a" rx="3" />
-    <text x="159.39252336448598" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="161.49532710280374" y="102.41274658573596" width="2.5233644859813085" height="67.58725341426404" fill="#16a34a" rx="3" />
-    <text x="162.7570093457944" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="164.85981308411215" y="81.00151745068285" width="2.5233644859813085" height="88.99848254931715" fill="#16a34a" rx="3" />
-    <text x="166.1214953271028" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="168.22429906542055" y="142.9135053110774" width="2.5233644859813085" height="27.08649468892261" fill="#16a34a" rx="3" />
-    <text x="169.4859813084112" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="171.58878504672896" y="112.47344461305008" width="2.5233644859813085" height="57.52655538694992" fill="#16a34a" rx="3" />
-    <text x="172.8504672897196" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="174.9532710280374" y="95.96358118361152" width="2.5233644859813085" height="74.03641881638848" fill="#16a34a" rx="3" />
-    <text x="176.21495327102804" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="178.3177570093458" y="106.54021244309561" width="2.5233644859813085" height="63.459787556904395" fill="#16a34a" rx="3" />
-    <text x="179.57943925233644" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="181.6822429906542" y="103.18664643399089" width="2.5233644859813085" height="66.81335356600911" fill="#16a34a" rx="3" />
-    <text x="182.94392523364485" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="185.0467289719626" y="106.79817905918058" width="2.5233644859813085" height="63.20182094081942" fill="#16a34a" rx="3" />
-    <text x="186.30841121495325" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="188.411214953271" y="126.9195751138088" width="2.5233644859813085" height="43.080424886191196" fill="#16a34a" rx="3" />
-    <text x="189.67289719626166" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="191.77570093457945" y="113.76327769347496" width="2.5233644859813085" height="56.23672230652504" fill="#16a34a" rx="3" />
-    <text x="193.0373831775701" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="195.14018691588785" y="117.37481031866464" width="2.5233644859813085" height="52.62518968133536" fill="#16a34a" rx="3" />
-    <text x="196.4018691588785" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="198.50467289719626" y="123.30804248861912" width="2.5233644859813085" height="46.69195751138088" fill="#16a34a" rx="3" />
-    <text x="199.7663551401869" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="201.86915887850466" y="140.33383915022762" width="2.5233644859813085" height="29.666160849772382" fill="#16a34a" rx="3" />
-    <text x="203.1308411214953" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="205.23364485981307" y="132.59484066767828" width="2.5233644859813085" height="37.4051593323217" fill="#16a34a" rx="3" />
-    <text x="206.4953271028037" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="208.5981308411215" y="152.71623672230652" width="2.5233644859813085" height="17.283763277693474" fill="#16a34a" rx="3" />
-    <text x="209.85981308411215" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="211.9626168224299" y="122.79210925644915" width="2.5233644859813085" height="47.20789074355084" fill="#16a34a" rx="3" />
-    <text x="213.22429906542055" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="215.3271028037383" y="138.52807283763278" width="2.5233644859813085" height="31.471927162367223" fill="#16a34a" rx="3" />
-    <text x="216.58878504672896" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="218.69158878504672" y="86.16084977238239" width="2.5233644859813085" height="83.83915022761761" fill="#16a34a" rx="3" />
-    <text x="219.95327102803736" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="222.05607476635512" y="75.06828528072838" width="2.5233644859813085" height="94.93171471927162" fill="#16a34a" rx="3" />
-    <text x="223.31775700934577" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="225.42056074766356" y="92.86798179059181" width="2.5233644859813085" height="77.13201820940819" fill="#16a34a" rx="3" />
-    <text x="226.6822429906542" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="228.78504672897196" y="127.95144157814872" width="2.5233644859813085" height="42.04855842185129" fill="#16a34a" rx="3" />
-    <text x="230.0467289719626" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="232.14953271028037" y="157.3596358118361" width="2.5233644859813085" height="12.640364188163884" fill="#16a34a" rx="3" />
-    <text x="233.411214953271" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="235.51401869158877" y="144.20333839150229" width="2.5233644859813085" height="25.796661608497722" fill="#16a34a" rx="3" />
-    <text x="236.77570093457942" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="238.87850467289718" y="127.95144157814872" width="2.5233644859813085" height="42.04855842185129" fill="#16a34a" rx="3" />
-    <text x="240.14018691588782" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="242.2429906542056" y="122.79210925644915" width="2.5233644859813085" height="47.20789074355084" fill="#16a34a" rx="3" />
-    <text x="243.50467289719626" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="245.60747663551402" y="148.84673748103188" width="2.5233644859813085" height="21.153262518968134" fill="#16a34a" rx="3" />
-    <text x="246.86915887850466" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="248.97196261682242" y="152.71623672230652" width="2.5233644859813085" height="17.283763277693474" fill="#16a34a" rx="3" />
-    <text x="250.23364485981307" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="252.33644859813083" y="139.3019726858877" width="2.5233644859813085" height="30.69802731411229" fill="#16a34a" rx="3" />
-    <text x="253.59813084112147" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="255.70093457943923" y="96.73748103186647" width="2.5233644859813085" height="73.26251896813353" fill="#16a34a" rx="3" />
-    <text x="256.9626168224299" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="259.06542056074767" y="134.14264036418817" width="2.5233644859813085" height="35.85735963581183" fill="#16a34a" rx="3" />
-    <text x="260.32710280373834" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="262.4299065420561" y="124.597875569044" width="2.5233644859813085" height="45.40212443095599" fill="#16a34a" rx="3" />
-    <text x="263.69158878504675" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="265.7943925233645" y="136.98027314112292" width="2.5233644859813085" height="33.019726858877085" fill="#16a34a" rx="3" />
-    <text x="267.05607476635515" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="269.1588785046729" y="118.66464339908953" width="2.5233644859813085" height="51.33535660091047" fill="#16a34a" rx="3" />
-    <text x="270.42056074766356" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="272.5233644859813" y="162.0030349013657" width="2.5233644859813085" height="7.996965098634295" fill="#16a34a" rx="3" />
-    <text x="273.78504672897196" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="275.8878504672897" y="144.46130500758724" width="2.5233644859813085" height="25.538694992412747" fill="#16a34a" rx="3" />
-    <text x="277.14953271028037" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="279.2523364485981" y="156.3277693474962" width="2.5233644859813085" height="13.672230652503792" fill="#16a34a" rx="3" />
-    <text x="280.5140186915888" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="282.61682242990656" y="144.71927162367223" width="2.5233644859813085" height="25.28072837632777" fill="#16a34a" rx="3" />
-    <text x="283.87850467289724" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="285.98130841121497" y="138.01213960546283" width="2.5233644859813085" height="31.98786039453718" fill="#16a34a" rx="3" />
-    <text x="287.24299065420564" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="289.3457943925234" y="149.87860394537176" width="2.5233644859813085" height="20.121396054628224" fill="#16a34a" rx="3" />
-    <text x="290.60747663551405" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="292.7102803738318" y="147.55690440060698" width="2.5233644859813085" height="22.44309559939302" fill="#16a34a" rx="3" />
-    <text x="293.97196261682245" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="296.0747663551402" y="151.42640364188165" width="2.5233644859813085" height="18.573596358118362" fill="#16a34a" rx="3" />
-    <text x="297.33644859813086" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="299.4392523364486" y="153.2321699544765" width="2.5233644859813085" height="16.76783004552352" fill="#16a34a" rx="3" />
-    <text x="300.70093457943926" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="302.803738317757" y="147.298937784522" width="2.5233644859813085" height="22.701062215477997" fill="#16a34a" rx="3" />
-    <text x="304.06542056074767" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="306.1682242990654" y="153.2321699544765" width="2.5233644859813085" height="16.76783004552352" fill="#16a34a" rx="3" />
-    <text x="307.4299065420561" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="309.5327102803738" y="140.07587253414263" width="2.5233644859813085" height="29.92412746585736" fill="#16a34a" rx="3" />
-    <text x="310.7943925233645" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="312.8971962616822" y="149.36267071320182" width="2.5233644859813085" height="20.63732928679818" fill="#16a34a" rx="3" />
-    <text x="314.1588785046729" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="316.2616822429907" y="155.2959028831563" width="2.5233644859813085" height="14.704097116843704" fill="#16a34a" rx="3" />
-    <text x="317.52336448598135" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="319.6261682242991" y="153.74810318664643" width="2.5233644859813085" height="16.251896813353568" fill="#16a34a" rx="3" />
-    <text x="320.88785046728975" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="322.9906542056075" y="151.16843702579666" width="2.5233644859813085" height="18.83156297420334" fill="#16a34a" rx="3" />
-    <text x="324.25233644859816" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="326.3551401869159" y="160.45523520485585" width="2.5233644859813085" height="9.544764795144157" fill="#16a34a" rx="3" />
-    <text x="327.61682242990656" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="329.7196261682243" y="148.5887708649469" width="2.5233644859813085" height="21.411229135053112" fill="#16a34a" rx="3" />
-    <text x="330.98130841121497" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="333.0841121495327" y="154.52200303490136" width="2.5233644859813085" height="15.477996965098633" fill="#16a34a" rx="3" />
-    <text x="334.3457943925234" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="336.4485981308411" y="156.84370257966617" width="2.5233644859813085" height="13.15629742033384" fill="#16a34a" rx="3" />
-    <text x="337.7102803738318" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="339.8130841121495" y="153.74810318664643" width="2.5233644859813085" height="16.251896813353568" fill="#16a34a" rx="3" />
-    <text x="341.0747663551402" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="343.1775700934579" y="153.2321699544765" width="2.5233644859813085" height="16.76783004552352" fill="#16a34a" rx="3" />
-    <text x="344.4392523364486" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="346.5420560747663" y="140.33383915022762" width="2.5233644859813085" height="29.666160849772382" fill="#16a34a" rx="3" />
-    <text x="347.803738317757" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="349.9065420560748" y="158.90743550834597" width="2.5233644859813085" height="11.09256449165402" fill="#16a34a" rx="3" />
-    <text x="351.16822429906546" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="353.2710280373832" y="149.87860394537176" width="2.5233644859813085" height="20.121396054628224" fill="#16a34a" rx="3" />
-    <text x="354.53271028037386" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="356.6355140186916" y="131.04704097116843" width="2.5233644859813085" height="38.952959028831565" fill="#16a34a" rx="3" />
-    <text x="357.89719626168227" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="360" y="160.45523520485585" width="2.5233644859813085" height="9.544764795144157" fill="#16a34a" rx="3" />
-    <text x="361.2616822429907" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="363.3644859813084" y="151.42640364188165" width="2.5233644859813085" height="18.573596358118362" fill="#16a34a" rx="3" />
-    <text x="364.6261682242991" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="366.7289719626168" y="157.6176024279211" width="2.5233644859813085" height="12.382397572078908" fill="#16a34a" rx="3" />
-    <text x="367.9906542056075" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="370.0934579439252" y="158.13353566009104" width="2.5233644859813085" height="11.866464339908953" fill="#16a34a" rx="3" />
-    <text x="371.3551401869159" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="373.4579439252336" y="152.71623672230652" width="2.5233644859813085" height="17.283763277693474" fill="#16a34a" rx="3" />
-    <text x="374.7196261682243" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="376.822429906542" y="162.2610015174507" width="2.5233644859813085" height="7.7389984825493165" fill="#16a34a" rx="3" />
-    <text x="378.0841121495327" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="380.18691588785043" y="155.03793626707133" width="2.5233644859813085" height="14.96206373292868" fill="#16a34a" rx="3" />
-    <text x="381.4485981308411" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="383.5514018691589" y="157.10166919575113" width="2.5233644859813085" height="12.898330804248861" fill="#16a34a" rx="3" />
-    <text x="384.81308411214957" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="386.9158878504673" y="163.80880121396055" width="2.5233644859813085" height="6.191198786039454" fill="#16a34a" rx="3" />
-    <text x="388.177570093458" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="390.2803738317757" y="165.87253414264038" width="2.5233644859813085" height="4.127465857359636" fill="#16a34a" rx="3" />
-    <text x="391.5420560747664" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="393.6448598130841" y="160.45523520485585" width="2.5233644859813085" height="9.544764795144157" fill="#16a34a" rx="3" />
-    <text x="394.9065420560748" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="397.0093457943925" y="164.06676783004553" width="2.5233644859813085" height="5.9332321699544766" fill="#16a34a" rx="3" />
-    <text x="398.2710280373832" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="400.3738317757009" y="160.9711684370258" width="2.5233644859813085" height="9.028831562974203" fill="#16a34a" rx="3" />
-    <text x="401.6355140186916" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="403.7383177570093" y="164.58270106221548" width="2.5233644859813085" height="5.417298937784522" fill="#16a34a" rx="3" />
-    <text x="405" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="407.10280373831773" y="164.58270106221548" width="2.5233644859813085" height="5.417298937784522" fill="#16a34a" rx="3" />
-    <text x="408.3644859813084" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="410.46728971962614" y="158.39150227617603" width="2.5233644859813085" height="11.608497723823975" fill="#16a34a" rx="3" />
-    <text x="411.7289719626168" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="413.83177570093454" y="162.77693474962064" width="2.5233644859813085" height="7.223065250379363" fill="#16a34a" rx="3" />
-    <text x="415.0934579439252" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="417.196261682243" y="161.74506828528072" width="2.5233644859813085" height="8.254931714719271" fill="#16a34a" rx="3" />
-    <text x="418.4579439252337" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="420.5607476635514" y="161.74506828528072" width="2.5233644859813085" height="8.254931714719271" fill="#16a34a" rx="3" />
-    <text x="421.8224299065421" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="423.9252336448598" y="166.38846737481032" width="2.5233644859813085" height="3.6115326251896813" fill="#16a34a" rx="3" />
-    <text x="425.1869158878505" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="427.2897196261682" y="167.16236722306525" width="2.5233644859813085" height="2.8376327769347496" fill="#16a34a" rx="3" />
-    <text x="428.5514018691589" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="430.6542056074766" y="166.90440060698026" width="2.5233644859813085" height="3.095599393019727" fill="#16a34a" rx="3" />
-    <text x="431.9158878504673" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="434.01869158878503" y="164.06676783004553" width="2.5233644859813085" height="5.9332321699544766" fill="#16a34a" rx="3" />
-    <text x="435.2803738317757" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="437.38317757009344" y="162.77693474962064" width="2.5233644859813085" height="7.223065250379363" fill="#16a34a" rx="3" />
-    <text x="438.6448598130841" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="440.74766355140184" y="154.00606980273142" width="2.5233644859813085" height="15.99393019726859" fill="#16a34a" rx="3" />
-    <text x="442.0093457943925" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="444.11214953271025" y="157.6176024279211" width="2.5233644859813085" height="12.382397572078908" fill="#16a34a" rx="3" />
-    <text x="445.3738317757009" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="447.4766355140187" y="160.19726858877087" width="2.5233644859813085" height="9.802731411229134" fill="#16a34a" rx="3" />
-    <text x="448.7383177570094" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="450.8411214953271" y="166.38846737481032" width="2.5233644859813085" height="3.6115326251896813" fill="#16a34a" rx="3" />
-    <text x="452.1028037383178" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="454.2056074766355" y="162.51896813353565" width="2.5233644859813085" height="7.48103186646434" fill="#16a34a" rx="3" />
-    <text x="455.4672897196262" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="457.5700934579439" y="155.81183611532626" width="2.5233644859813085" height="14.188163884673749" fill="#16a34a" rx="3" />
-    <text x="458.8317757009346" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="460.93457943925233" y="168.9681335356601" width="2.5233644859813085" height="1.031866464339909" fill="#16a34a" rx="3" />
-    <text x="462.196261682243" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="464.29906542056074" y="155.81183611532626" width="2.5233644859813085" height="14.188163884673749" fill="#16a34a" rx="3" />
-    <text x="465.5607476635514" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="467.66355140186914" y="112.98937784522002" width="2.5233644859813085" height="57.01062215477997" fill="#16a34a" rx="3" />
-    <text x="468.9252336448598" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="471.02803738317755" y="162.0030349013657" width="2.5233644859813085" height="7.996965098634295" fill="#16a34a" rx="3" />
-    <text x="472.2897196261682" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="474.39252336448595" y="164.84066767830046" width="2.5233644859813085" height="5.159332321699545" fill="#16a34a" rx="3" />
-    <text x="475.6542056074766" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="477.75700934579436" y="169.48406676783006" width="2.5233644859813085" height="0.5159332321699545" fill="#16a34a" rx="3" />
-    <text x="479.01869158878503" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="481.1214953271028" y="169.22610015174507" width="2.5233644859813085" height="0.7738998482549317" fill="#16a34a" rx="3" />
-    <text x="482.3831775700935" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="484.4859813084112" y="167.67830045523522" width="2.5233644859813085" height="2.3216995447647952" fill="#16a34a" rx="3" />
-    <text x="485.7476635514019" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="487.85046728971963" y="168.9681335356601" width="2.5233644859813085" height="1.031866464339909" fill="#16a34a" rx="3" />
-    <text x="489.1121495327103" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="491.21495327102804" y="167.42033383915023" width="2.5233644859813085" height="2.5796661608497726" fill="#16a34a" rx="3" />
-    <text x="492.4766355140187" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="494.57943925233644" y="159.6813353566009" width="2.5233644859813085" height="10.31866464339909" fill="#16a34a" rx="3" />
-    <text x="495.8411214953271" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="497.94392523364485" y="168.7101669195751" width="2.5233644859813085" height="1.2898330804248863" fill="#16a34a" rx="3" />
-    <text x="499.2056074766355" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="501.30841121495325" y="161.48710166919574" width="2.5233644859813085" height="8.51289833080425" fill="#16a34a" rx="3" />
-    <text x="502.5700934579439" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="504.67289719626166" y="124.597875569044" width="2.5233644859813085" height="45.40212443095599" fill="#16a34a" rx="3" />
-    <text x="505.93457943925233" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="508.03738317757006" y="145.75113808801214" width="2.5233644859813085" height="24.248861911987863" fill="#16a34a" rx="3" />
-    <text x="509.29906542056074" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="511.40186915887847" y="163.29286798179058" width="2.5233644859813085" height="6.707132018209408" fill="#16a34a" rx="3" />
-    <text x="512.6635514018691" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="514.7663551401869" y="142.13960546282246" width="2.5233644859813085" height="27.860394537177545" fill="#16a34a" rx="3" />
-    <text x="516.0280373831775" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="518.1308411214953" y="145.49317147192716" width="2.5233644859813085" height="24.506828528072838" fill="#16a34a" rx="3" />
-    <text x="519.392523364486" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="521.4953271028037" y="163.80880121396055" width="2.5233644859813085" height="6.191198786039454" fill="#16a34a" rx="3" />
-    <text x="522.7570093457944" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="524.8598130841121" y="166.13050075872533" width="2.5233644859813085" height="3.8694992412746583" fill="#16a34a" rx="3" />
-    <text x="526.1214953271028" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="528.2242990654205" y="145.49317147192716" width="2.5233644859813085" height="24.506828528072838" fill="#16a34a" rx="3" />
-    <text x="529.4859813084112" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="531.588785046729" y="90.28831562974203" width="2.5233644859813085" height="79.71168437025797" fill="#16a34a" rx="3" />
-    <text x="532.8504672897196" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="534.9532710280374" y="107.31411229135054" width="2.5233644859813085" height="62.68588770864947" fill="#16a34a" rx="3" />
-    <text x="536.2149532710281" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="538.3177570093458" y="86.93474962063733" width="2.5233644859813085" height="83.06525037936267" fill="#16a34a" rx="3" />
-    <text x="539.5794392523364" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="541.6822429906542" y="124.597875569044" width="2.5233644859813085" height="45.40212443095599" fill="#16a34a" rx="3" />
-    <text x="542.9439252336449" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="545.0467289719626" y="138.52807283763278" width="2.5233644859813085" height="31.471927162367223" fill="#16a34a" rx="3" />
-    <text x="546.3084112149533" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="548.411214953271" y="129.49924127465857" width="2.5233644859813085" height="40.50075872534143" fill="#16a34a" rx="3" />
-    <text x="549.6728971962617" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="551.7757009345794" y="141.36570561456753" width="2.5233644859813085" height="28.634294385432476" fill="#16a34a" rx="3" />
-    <text x="553.0373831775701" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="555.1401869158879" y="127.95144157814872" width="2.5233644859813085" height="42.04855842185129" fill="#16a34a" rx="3" />
-    <text x="556.4018691588785" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="558.5046728971962" y="117.8907435508346" width="2.5233644859813085" height="52.1092564491654" fill="#16a34a" rx="3" />
-    <text x="559.7663551401869" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="561.8691588785047" y="56.49468892261001" width="2.5233644859813085" height="113.50531107738999" fill="#16a34a" rx="3" />
-    <text x="563.1308411214953" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="565.2336448598131" y="68.103186646434" width="2.5233644859813085" height="101.896813353566" fill="#16a34a" rx="3" />
-    <text x="566.4953271028038" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="568.5981308411215" y="103.70257966616084" width="2.5233644859813085" height="66.29742033383916" fill="#16a34a" rx="3" />
-    <text x="569.8598130841121" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="571.9626168224299" y="107.83004552352048" width="2.5233644859813085" height="62.16995447647951" fill="#16a34a" rx="3" />
-    <text x="573.2242990654206" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="575.3271028037383" y="109.63581183611532" width="2.5233644859813085" height="60.36418816388467" fill="#16a34a" rx="3" />
-    <text x="576.588785046729" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="578.6915887850467" y="118.66464339908953" width="2.5233644859813085" height="51.33535660091047" fill="#16a34a" rx="3" />
-    <text x="579.9532710280374" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="582.0560747663551" y="118.14871016691959" width="2.5233644859813085" height="51.85128983308042" fill="#16a34a" rx="3" />
-    <text x="583.3177570093458" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="585.4205607476636" y="3.869499241274667" width="2.5233644859813085" height="166.13050075872533" fill="#16a34a" rx="3" />
-    <text x="586.6822429906542" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="588.7850467289719" y="79.96965098634296" width="2.5233644859813085" height="90.03034901365704" fill="#16a34a" rx="3" />
-    <text x="590.0467289719626" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="592.1495327102804" y="0" width="2.5233644859813085" height="170" fill="#16a34a" rx="3" />
-    <text x="593.411214953271" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="595.5140186915887" y="37.14719271623673" width="2.5233644859813085" height="132.85280728376327" fill="#16a34a" rx="3" />
-    <text x="596.7757009345794" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="598.8785046728972" y="44.88619119878605" width="2.5233644859813085" height="125.11380880121395" fill="#16a34a" rx="3" />
-    <text x="600.1401869158879" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="602.2429906542056" y="78.93778452200304" width="2.5233644859813085" height="91.06221547799696" fill="#16a34a" rx="3" />
-    <text x="603.5046728971963" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="605.607476635514" y="43.08042488619121" width="2.5233644859813085" height="126.91957511380879" fill="#16a34a" rx="3" />
-    <text x="606.8691588785047" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="608.9719626168225" y="67.07132018209408" width="2.5233644859813085" height="102.92867981790592" fill="#16a34a" rx="3" />
-    <text x="610.2336448598131" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="612.3364485981308" y="77.1320182094082" width="2.5233644859813085" height="92.8679817905918" fill="#16a34a" rx="3" />
-    <text x="613.5981308411215" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="615.7009345794393" y="76.61608497723824" width="2.5233644859813085" height="93.38391502276176" fill="#16a34a" rx="3" />
-    <text x="616.9626168224299" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="619.0654205607476" y="82.03338391502277" width="2.5233644859813085" height="87.96661608497723" fill="#16a34a" rx="3" />
-    <text x="620.3271028037383" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="622.4299065420561" y="58.55842185128982" width="2.5233644859813085" height="111.44157814871018" fill="#16a34a" rx="3" />
-    <text x="623.6915887850467" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="625.7943925233644" y="75.06828528072838" width="2.5233644859813085" height="94.93171471927162" fill="#16a34a" rx="3" />
-    <text x="627.0560747663551" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="629.1588785046729" y="75.8421851289833" width="2.5233644859813085" height="94.1578148710167" fill="#16a34a" rx="3" />
-    <text x="630.4205607476636" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="632.5233644859813" y="115.31107738998483" width="2.5233644859813085" height="54.68892261001517" fill="#16a34a" rx="3" />
-    <text x="633.785046728972" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="635.8878504672897" y="85.90288315629742" width="2.5233644859813085" height="84.09711684370258" fill="#16a34a" rx="3" />
-    <text x="637.1495327102804" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="639.2523364485982" y="130.5311077389985" width="2.5233644859813085" height="39.468892261001514" fill="#16a34a" rx="3" />
-    <text x="640.5140186915888" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="642.6168224299065" y="142.9135053110774" width="2.5233644859813085" height="27.08649468892261" fill="#16a34a" rx="3" />
-    <text x="643.8785046728972" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="645.981308411215" y="149.10470409711684" width="2.5233644859813085" height="20.895295902883156" fill="#16a34a" rx="3" />
-    <text x="647.2429906542056" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="649.3457943925233" y="154.77996965098635" width="2.5233644859813085" height="15.220030349013657" fill="#16a34a" rx="3" />
-    <text x="650.607476635514" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="652.7102803738318" y="155.03793626707133" width="2.5233644859813085" height="14.96206373292868" fill="#16a34a" rx="3" />
-    <text x="653.9719626168225" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="656.0747663551401" y="164.3247344461305" width="2.5233644859813085" height="5.675265553869499" fill="#16a34a" rx="3" />
-    <text x="657.3364485981308" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="659.4392523364486" y="154.00606980273142" width="2.5233644859813085" height="15.99393019726859" fill="#16a34a" rx="3" />
-    <text x="660.7009345794393" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="662.803738317757" y="150.91047040971168" width="2.5233644859813085" height="19.089529590288315" fill="#16a34a" rx="3" />
-    <text x="664.0654205607477" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="666.1682242990654" y="139.3019726858877" width="2.5233644859813085" height="30.69802731411229" fill="#16a34a" rx="3" />
-    <text x="667.4299065420561" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="669.5327102803739" y="132.59484066767828" width="2.5233644859813085" height="37.4051593323217" fill="#16a34a" rx="3" />
-    <text x="670.7943925233645" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="672.8971962616822" y="120.98634294385432" width="2.5233644859813085" height="49.013657056145675" fill="#16a34a" rx="3" />
-    <text x="674.1588785046729" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="676.2616822429907" y="84.09711684370258" width="2.5233644859813085" height="85.90288315629742" fill="#16a34a" rx="3" />
-    <text x="677.5233644859813" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <rect x="679.626168224299" y="96.47951441578148" width="2.5233644859813085" height="73.52048558421852" fill="#16a34a" rx="3" />
-    <text x="680.8878504672897" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Dec</text>
-    <rect x="682.9906542056075" y="101.12291350531108" width="2.5233644859813085" height="68.87708649468892" fill="#16a34a" rx="3" />
-    <text x="684.2523364485982" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jan</text>
-    <rect x="686.3551401869158" y="134.14264036418817" width="2.5233644859813085" height="35.85735963581183" fill="#16a34a" rx="3" />
-    <text x="687.6168224299065" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Feb</text>
-    <rect x="689.7196261682243" y="125.62974203338392" width="2.5233644859813085" height="44.37025796661608" fill="#16a34a" rx="3" />
-    <text x="690.981308411215" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Mar</text>
-    <rect x="693.0841121495326" y="108.08801213960547" width="2.5233644859813085" height="61.91198786039453" fill="#16a34a" rx="3" />
-    <text x="694.3457943925233" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Apr</text>
-    <rect x="696.4485981308411" y="125.11380880121396" width="2.5233644859813085" height="44.88619119878604" fill="#16a34a" rx="3" />
-    <text x="697.7102803738318" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">May</text>
-    <rect x="699.8130841121496" y="106.02427921092564" width="2.5233644859813085" height="63.97572078907436" fill="#16a34a" rx="3" />
-    <text x="701.0747663551402" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jun</text>
-    <rect x="703.1775700934579" y="145.49317147192716" width="2.5233644859813085" height="24.506828528072838" fill="#16a34a" rx="3" />
-    <text x="704.4392523364486" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Jul</text>
-    <rect x="706.5420560747664" y="131.3050075872534" width="2.5233644859813085" height="38.694992412746586" fill="#16a34a" rx="3" />
-    <text x="707.803738317757" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Aug</text>
-    <rect x="709.9065420560747" y="156.06980273141122" width="2.5233644859813085" height="13.930197268588772" fill="#16a34a" rx="3" />
-    <text x="711.1682242990654" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Sep</text>
-    <rect x="713.2710280373832" y="133.11077389984825" width="2.5233644859813085" height="36.889226100151745" fill="#16a34a" rx="3" />
-    <text x="714.5327102803739" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Oct</text>
-    <rect x="716.6355140186915" y="152.9742033383915" width="2.5233644859813085" height="17.0257966616085" fill="#16a34a" rx="3" />
-    <text x="717.8971962616822" y="188" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">Nov</text>
-    <text x="-6" y="170" font-family="Arial" font-size="11" fill="#666" text-anchor="end">0</text>
-    <text x="-6" y="10" font-family="Arial" font-size="11" fill="#666" text-anchor="end">659</text>
+    <rect x="0" y="109.11646586345381" width="4.462809917355372" height="0.8835341365461846" fill="#16a34a" rx="3" />
+    <text x="2.231404958677686" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="5.950413223140496" y="109.77911646586345" width="4.462809917355372" height="0.22088353413654616" fill="#16a34a" rx="3" />
+    <text x="8.181818181818182" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="11.900826446280991" y="107.1285140562249" width="4.462809917355372" height="2.8714859437751" fill="#16a34a" rx="3" />
+    <text x="14.132231404958677" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="17.85123966942149" y="92.32931726907631" width="4.462809917355372" height="17.670682730923694" fill="#16a34a" rx="3" />
+    <text x="20.082644628099175" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="23.801652892561982" y="77.53012048192771" width="4.462809917355372" height="32.46987951807229" fill="#16a34a" rx="3" />
+    <text x="26.03305785123967" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="29.752066115702476" y="91.44578313253012" width="4.462809917355372" height="18.55421686746988" fill="#16a34a" rx="3" />
+    <text x="31.983471074380162" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="35.70247933884298" y="87.46987951807229" width="4.462809917355372" height="22.53012048192771" fill="#16a34a" rx="3" />
+    <text x="37.93388429752066" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="41.65289256198347" y="88.13253012048193" width="4.462809917355372" height="21.867469879518072" fill="#16a34a" rx="3" />
+    <text x="43.88429752066116" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="47.603305785123965" y="81.72690763052209" width="4.462809917355372" height="28.273092369477908" fill="#16a34a" rx="3" />
+    <text x="49.83471074380165" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="53.55371900826446" y="82.16867469879519" width="4.462809917355372" height="27.831325301204817" fill="#16a34a" rx="3" />
+    <text x="55.785123966942145" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="59.50413223140495" y="83.49397590361446" width="4.462809917355372" height="26.50602409638554" fill="#16a34a" rx="3" />
+    <text x="61.73553719008264" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="65.45454545454545" y="103.59437751004016" width="4.462809917355372" height="6.40562248995984" fill="#16a34a" rx="3" />
+    <text x="67.68595041322314" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="71.40495867768595" y="100.28112449799197" width="4.462809917355372" height="9.718875502008032" fill="#16a34a" rx="3" />
+    <text x="73.63636363636364" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="77.35537190082644" y="98.5140562248996" width="4.462809917355372" height="11.4859437751004" fill="#16a34a" rx="3" />
+    <text x="79.58677685950413" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">2014</text>
+    <rect x="83.30578512396694" y="101.60642570281124" width="4.462809917355372" height="8.393574297188756" fill="#16a34a" rx="3" />
+    <text x="85.53719008264463" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="89.25619834710743" y="106.46586345381526" width="4.462809917355372" height="3.5341365461847385" fill="#16a34a" rx="3" />
+    <text x="91.48760330578511" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="95.20661157024793" y="109.33734939759036" width="4.462809917355372" height="0.6626506024096386" fill="#16a34a" rx="3" />
+    <text x="97.43801652892562" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="101.15702479338843" y="109.33734939759036" width="4.462809917355372" height="0.6626506024096386" fill="#16a34a" rx="3" />
+    <text x="103.38842975206612" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="107.10743801652892" y="109.33734939759036" width="4.462809917355372" height="0.6626506024096386" fill="#16a34a" rx="3" />
+    <text x="109.3388429752066" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="113.05785123966942" y="108.23293172690764" width="4.462809917355372" height="1.7670682730923692" fill="#16a34a" rx="3" />
+    <text x="115.2892561983471" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="119.0082644628099" y="108.89558232931726" width="4.462809917355372" height="1.104417670682731" fill="#16a34a" rx="3" />
+    <text x="121.23966942148759" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="124.9586776859504" y="107.570281124498" width="4.462809917355372" height="2.429718875502008" fill="#16a34a" rx="3" />
+    <text x="127.19008264462809" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="130.9090909090909" y="108.01204819277109" width="4.462809917355372" height="1.9879518072289155" fill="#16a34a" rx="3" />
+    <text x="133.1404958677686" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="136.8595041322314" y="108.23293172690764" width="4.462809917355372" height="1.7670682730923692" fill="#16a34a" rx="3" />
+    <text x="139.09090909090907" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="142.8099173553719" y="103.37349397590361" width="4.462809917355372" height="6.626506024096385" fill="#16a34a" rx="3" />
+    <text x="145.04132231404958" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="148.7603305785124" y="100.50200803212851" width="4.462809917355372" height="9.497991967871487" fill="#16a34a" rx="3" />
+    <text x="150.9917355371901" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">2015</text>
+    <rect x="154.71074380165288" y="108.89558232931726" width="4.462809917355372" height="1.104417670682731" fill="#16a34a" rx="3" />
+    <text x="156.94214876033055" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="160.66115702479337" y="100.94377510040161" width="4.462809917355372" height="9.056224899598392" fill="#16a34a" rx="3" />
+    <text x="162.89256198347107" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="166.61157024793388" y="97.85140562248996" width="4.462809917355372" height="12.14859437751004" fill="#16a34a" rx="3" />
+    <text x="168.84297520661158" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="172.56198347107437" y="103.81526104417671" width="4.462809917355372" height="6.184738955823293" fill="#16a34a" rx="3" />
+    <text x="174.79338842975204" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="178.51239669421486" y="95.86345381526104" width="4.462809917355372" height="14.136546184738954" fill="#16a34a" rx="3" />
+    <text x="180.74380165289256" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="184.46280991735537" y="96.74698795180723" width="4.462809917355372" height="13.25301204819277" fill="#16a34a" rx="3" />
+    <text x="186.69421487603307" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="190.41322314049586" y="102.26907630522088" width="4.462809917355372" height="7.730923694779117" fill="#16a34a" rx="3" />
+    <text x="192.64462809917353" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="196.36363636363635" y="96.96787148594377" width="4.462809917355372" height="13.032128514056225" fill="#16a34a" rx="3" />
+    <text x="198.59504132231405" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="202.31404958677686" y="101.16465863453816" width="4.462809917355372" height="8.835341365461847" fill="#16a34a" rx="3" />
+    <text x="204.54545454545456" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="208.26446280991735" y="105.58232931726907" width="4.462809917355372" height="4.417670682730924" fill="#16a34a" rx="3" />
+    <text x="210.49586776859502" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="214.21487603305783" y="105.14056224899599" width="4.462809917355372" height="4.859437751004016" fill="#16a34a" rx="3" />
+    <text x="216.44628099173553" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="220.16528925619835" y="99.83935742971887" width="4.462809917355372" height="10.160642570281125" fill="#16a34a" rx="3" />
+    <text x="222.39669421487605" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">2016</text>
+    <rect x="226.11570247933884" y="105.36144578313252" width="4.462809917355372" height="4.63855421686747" fill="#16a34a" rx="3" />
+    <text x="228.3471074380165" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="232.06611570247932" y="105.58232931726907" width="4.462809917355372" height="4.417670682730924" fill="#16a34a" rx="3" />
+    <text x="234.29752066115702" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="238.0165289256198" y="106.6867469879518" width="4.462809917355372" height="3.3132530120481927" fill="#16a34a" rx="3" />
+    <text x="240.24793388429748" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="243.96694214876032" y="97.85140562248996" width="4.462809917355372" height="12.14859437751004" fill="#16a34a" rx="3" />
+    <text x="246.198347107438" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="249.9173553719008" y="109.11646586345381" width="4.462809917355372" height="0.8835341365461846" fill="#16a34a" rx="3" />
+    <text x="252.1487603305785" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="255.8677685950413" y="109.77911646586345" width="4.462809917355372" height="0.22088353413654616" fill="#16a34a" rx="3" />
+    <text x="258.09917355371897" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="261.8181818181818" y="99.39759036144578" width="4.462809917355372" height="10.602409638554217" fill="#16a34a" rx="3" />
+    <text x="264.0495867768595" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="267.7685950413223" y="109.5582329317269" width="4.462809917355372" height="0.4417670682730923" fill="#16a34a" rx="3" />
+    <text x="270" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="273.7190082644628" y="106.6867469879518" width="4.462809917355372" height="3.3132530120481927" fill="#16a34a" rx="3" />
+    <text x="275.95041322314046" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="279.6694214876033" y="107.1285140562249" width="4.462809917355372" height="2.8714859437751" fill="#16a34a" rx="3" />
+    <text x="281.900826446281" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="285.6198347107438" y="109.11646586345381" width="4.462809917355372" height="0.8835341365461846" fill="#16a34a" rx="3" />
+    <text x="287.8512396694215" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="291.5702479338843" y="107.79116465863454" width="4.462809917355372" height="2.208835341365462" fill="#16a34a" rx="3" />
+    <text x="293.80165289256195" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">2017</text>
+    <rect x="297.5206611570248" y="107.570281124498" width="4.462809917355372" height="2.429718875502008" fill="#16a34a" rx="3" />
+    <text x="299.75206611570246" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="303.47107438016525" y="108.45381526104417" width="4.462809917355372" height="1.5461847389558232" fill="#16a34a" rx="3" />
+    <text x="305.7024793388429" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="309.42148760330576" y="109.5582329317269" width="4.462809917355372" height="0.4417670682730923" fill="#16a34a" rx="3" />
+    <text x="311.65289256198344" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">2018</text>
+    <rect x="315.3719008264463" y="109.11646586345381" width="4.462809917355372" height="0.8835341365461846" fill="#16a34a" rx="3" />
+    <text x="317.60330578512395" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="321.32231404958674" y="109.5582329317269" width="4.462809917355372" height="0.4417670682730923" fill="#16a34a" rx="3" />
+    <text x="323.5537190082644" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="327.27272727272725" y="109.77911646586345" width="4.462809917355372" height="0.22088353413654616" fill="#16a34a" rx="3" />
+    <text x="329.5041322314049" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="333.22314049586777" y="109.11646586345381" width="4.462809917355372" height="0.8835341365461846" fill="#16a34a" rx="3" />
+    <text x="335.45454545454544" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="339.1735537190082" y="107.79116465863454" width="4.462809917355372" height="2.208835341365462" fill="#16a34a" rx="3" />
+    <text x="341.4049586776859" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="345.12396694214874" y="109.11646586345381" width="4.462809917355372" height="0.8835341365461846" fill="#16a34a" rx="3" />
+    <text x="347.3553719008264" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="351.07438016528926" y="107.570281124498" width="4.462809917355372" height="2.429718875502008" fill="#16a34a" rx="3" />
+    <text x="353.3057851239669" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="357.0247933884297" y="106.24497991967871" width="4.462809917355372" height="3.755020080321285" fill="#16a34a" rx="3" />
+    <text x="359.2561983471074" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="362.97520661157023" y="107.1285140562249" width="4.462809917355372" height="2.8714859437751" fill="#16a34a" rx="3" />
+    <text x="365.2066115702479" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="368.92561983471074" y="106.02409638554217" width="4.462809917355372" height="3.975903614457831" fill="#16a34a" rx="3" />
+    <text x="371.1570247933884" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">2021</text>
+    <rect x="374.8760330578512" y="109.33734939759036" width="4.462809917355372" height="0.6626506024096386" fill="#16a34a" rx="3" />
+    <text x="377.1074380165289" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="380.8264462809917" y="89.67871485943775" width="4.462809917355372" height="20.32128514056225" fill="#16a34a" rx="3" />
+    <text x="383.0578512396694" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="386.77685950413223" y="57.65060240963856" width="4.462809917355372" height="52.34939759036144" fill="#16a34a" rx="3" />
+    <text x="389.0082644628099" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="392.7272727272727" y="81.94779116465864" width="4.462809917355372" height="28.052208835341368" fill="#16a34a" rx="3" />
+    <text x="394.95867768595036" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="398.6776859504132" y="73.33333333333334" width="4.462809917355372" height="36.666666666666664" fill="#16a34a" rx="3" />
+    <text x="400.9090909090909" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="404.6280991735537" y="87.69076305220884" width="4.462809917355372" height="22.309236947791163" fill="#16a34a" rx="3" />
+    <text x="406.8595041322314" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="410.5785123966942" y="87.0281124497992" width="4.462809917355372" height="22.9718875502008" fill="#16a34a" rx="3" />
+    <text x="412.80991735537185" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="416.5289256198347" y="82.83132530120483" width="4.462809917355372" height="27.16867469879518" fill="#16a34a" rx="3" />
+    <text x="418.76033057851237" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="422.4793388429752" y="90.56224899598394" width="4.462809917355372" height="19.437751004016064" fill="#16a34a" rx="3" />
+    <text x="424.7107438016529" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="428.42975206611567" y="82.38955823293173" width="4.462809917355372" height="27.610441767068274" fill="#16a34a" rx="3" />
+    <text x="430.66115702479334" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="434.3801652892562" y="90.34136546184739" width="4.462809917355372" height="19.65863453815261" fill="#16a34a" rx="3" />
+    <text x="436.61157024793386" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="440.3305785123967" y="66.70682730923696" width="4.462809917355372" height="43.29317269076305" fill="#16a34a" rx="3" />
+    <text x="442.56198347107437" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">2022</text>
+    <rect x="446.28099173553716" y="71.56626506024097" width="4.462809917355372" height="38.433734939759034" fill="#16a34a" rx="3" />
+    <text x="448.51239669421483" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="452.2314049586777" y="70.02008032128514" width="4.462809917355372" height="39.979919678714865" fill="#16a34a" rx="3" />
+    <text x="454.46280991735534" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="458.1818181818182" y="84.37751004016064" width="4.462809917355372" height="25.62248995983936" fill="#16a34a" rx="3" />
+    <text x="460.41322314049586" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="464.13223140495865" y="72.67068273092369" width="4.462809917355372" height="37.329317269076306" fill="#16a34a" rx="3" />
+    <text x="466.3636363636363" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="470.08264462809916" y="86.36546184738955" width="4.462809917355372" height="23.634538152610443" fill="#16a34a" rx="3" />
+    <text x="472.31404958677683" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="476.0330578512396" y="89.23694779116465" width="4.462809917355372" height="20.76305220883534" fill="#16a34a" rx="3" />
+    <text x="478.2644628099173" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="481.98347107438013" y="4.638554216867462" width="4.462809917355372" height="105.36144578313254" fill="#16a34a" rx="3" />
+    <text x="484.2148760330578" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="487.93388429752065" y="60.963855421686745" width="4.462809917355372" height="49.036144578313255" fill="#16a34a" rx="3" />
+    <text x="490.1652892561983" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="493.8842975206611" y="0" width="4.462809917355372" height="110" fill="#16a34a" rx="3" />
+    <text x="496.1157024793388" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="499.8347107438016" y="42.40963855421687" width="4.462809917355372" height="67.59036144578313" fill="#16a34a" rx="3" />
+    <text x="502.0661157024793" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="505.78512396694214" y="31.807228915662648" width="4.462809917355372" height="78.19277108433735" fill="#16a34a" rx="3" />
+    <text x="508.0165289256198" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="511.7355371900826" y="62.06827309236948" width="4.462809917355372" height="47.93172690763052" fill="#16a34a" rx="3" />
+    <text x="513.9669421487603" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">2023</text>
+    <rect x="517.6859504132232" y="76.20481927710844" width="4.462809917355372" height="33.795180722891565" fill="#16a34a" rx="3" />
+    <text x="519.9173553719008" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="523.6363636363636" y="53.23293172690763" width="4.462809917355372" height="56.76706827309237" fill="#16a34a" rx="3" />
+    <text x="525.8677685950413" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="529.5867768595041" y="60.08032128514056" width="4.462809917355372" height="49.91967871485944" fill="#16a34a" rx="3" />
+    <text x="531.8181818181818" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="535.5371900826447" y="53.23293172690763" width="4.462809917355372" height="56.76706827309237" fill="#16a34a" rx="3" />
+    <text x="537.7685950413223" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="541.4876033057851" y="72.22891566265059" width="4.462809917355372" height="37.7710843373494" fill="#16a34a" rx="3" />
+    <text x="543.7190082644628" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="547.4380165289256" y="71.12449799196787" width="4.462809917355372" height="38.87550200803213" fill="#16a34a" rx="3" />
+    <text x="549.6694214876032" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="553.3884297520661" y="66.26506024096386" width="4.462809917355372" height="43.734939759036145" fill="#16a34a" rx="3" />
+    <text x="555.6198347107438" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="559.3388429752066" y="65.82329317269077" width="4.462809917355372" height="44.17670682730924" fill="#16a34a" rx="3" />
+    <text x="561.5702479338843" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="565.2892561983471" y="80.18072289156626" width="4.462809917355372" height="29.819277108433734" fill="#16a34a" rx="3" />
+    <text x="567.5206611570247" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="571.2396694214876" y="68.25301204819277" width="4.462809917355372" height="41.74698795180723" fill="#16a34a" rx="3" />
+    <text x="573.4710743801653" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="577.1900826446281" y="95.86345381526104" width="4.462809917355372" height="14.136546184738954" fill="#16a34a" rx="3" />
+    <text x="579.4214876033058" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="583.1404958677685" y="100.72289156626506" width="4.462809917355372" height="9.27710843373494" fill="#16a34a" rx="3" />
+    <text x="585.3719008264462" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">2024</text>
+    <rect x="589.090909090909" y="104.03614457831326" width="4.462809917355372" height="5.963855421686747" fill="#16a34a" rx="3" />
+    <text x="591.3223140495867" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="595.0413223140496" y="100.28112449799197" width="4.462809917355372" height="9.718875502008032" fill="#16a34a" rx="3" />
+    <text x="597.2727272727273" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="600.99173553719" y="105.58232931726907" width="4.462809917355372" height="4.417670682730924" fill="#16a34a" rx="3" />
+    <text x="603.2231404958677" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="606.9421487603305" y="106.46586345381526" width="4.462809917355372" height="3.5341365461847385" fill="#16a34a" rx="3" />
+    <text x="609.1735537190082" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="612.8925619834711" y="99.17670682730923" width="4.462809917355372" height="10.823293172690763" fill="#16a34a" rx="3" />
+    <text x="615.1239669421487" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="618.8429752066115" y="99.39759036144578" width="4.462809917355372" height="10.602409638554217" fill="#16a34a" rx="3" />
+    <text x="621.0743801652892" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="624.793388429752" y="82.16867469879519" width="4.462809917355372" height="27.831325301204817" fill="#16a34a" rx="3" />
+    <text x="627.0247933884297" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="630.7438016528926" y="82.83132530120483" width="4.462809917355372" height="27.16867469879518" fill="#16a34a" rx="3" />
+    <text x="632.9752066115702" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="636.694214876033" y="78.63453815261045" width="4.462809917355372" height="31.365461847389557" fill="#16a34a" rx="3" />
+    <text x="638.9256198347107" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="642.6446280991735" y="52.57028112449799" width="4.462809917355372" height="57.42971887550201" fill="#16a34a" rx="3" />
+    <text x="644.8760330578511" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="648.595041322314" y="51.024096385542165" width="4.462809917355372" height="58.975903614457835" fill="#16a34a" rx="3" />
+    <text x="650.8264462809917" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="654.5454545454545" y="52.34939759036145" width="4.462809917355372" height="57.65060240963855" fill="#16a34a" rx="3" />
+    <text x="656.7768595041322" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle">2025</text>
+    <rect x="660.495867768595" y="75.32128514056225" width="4.462809917355372" height="34.67871485943775" fill="#16a34a" rx="3" />
+    <text x="662.7272727272726" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="666.4462809917355" y="72.00803212851406" width="4.462809917355372" height="37.99196787148595" fill="#16a34a" rx="3" />
+    <text x="668.6776859504132" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="672.396694214876" y="60.963855421686745" width="4.462809917355372" height="49.036144578313255" fill="#16a34a" rx="3" />
+    <text x="674.6280991735537" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="678.3471074380165" y="73.55421686746988" width="4.462809917355372" height="36.445783132530124" fill="#16a34a" rx="3" />
+    <text x="680.5785123966941" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="684.297520661157" y="52.791164658634536" width="4.462809917355372" height="57.208835341365464" fill="#16a34a" rx="3" />
+    <text x="686.5289256198347" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="690.2479338842975" y="91.66666666666667" width="4.462809917355372" height="18.333333333333332" fill="#16a34a" rx="3" />
+    <text x="692.4793388429752" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="696.1983471074379" y="75.76305220883535" width="4.462809917355372" height="34.23694779116466" fill="#16a34a" rx="3" />
+    <text x="698.4297520661156" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="702.1487603305785" y="102.26907630522088" width="4.462809917355372" height="7.730923694779117" fill="#16a34a" rx="3" />
+    <text x="704.3801652892562" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="708.099173553719" y="79.29718875502009" width="4.462809917355372" height="30.702811244979916" fill="#16a34a" rx="3" />
+    <text x="710.3305785123966" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <rect x="714.0495867768594" y="96.52610441767068" width="4.462809917355372" height="13.473895582329316" fill="#16a34a" rx="3" />
+    <text x="716.2809917355371" y="128" font-family="Arial" font-size="11" fill="#444" text-anchor="middle"></text>
+    <text x="-6" y="110" font-family="Arial" font-size="11" fill="#666" text-anchor="end">0</text>
+    <text x="-6" y="10" font-family="Arial" font-size="11" fill="#666" text-anchor="end">498</text>
   </g>
 </svg>
