@@ -17,7 +17,7 @@ Want to create your own? Check out the [documentation](DOCUMENTATION.md) to lear
   <img src="./repo-stats.svg" alt="Repository Statistics" width="500"/>
 </p>
 
-**Total Repositories:** 32 | **Public:** 32 | **Private:** 0
+**Total Repositories:** 123 | **Public:** 32 | **Private:** 91
 
 ### 💻 Programming Languages
 
@@ -38,6 +38,6 @@ Want to create your own? Check out the [documentation](DOCUMENTATION.md) to lear
 </p>
 
 
-*Last updated: Tue, 11 Nov 2025 13:02:31 GMT*
+*Last updated: Tue, 11 Nov 2025 13:13:41 GMT*
 
 <!-- STATS:END -->
