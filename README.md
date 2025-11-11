@@ -9,19 +9,35 @@ This profile automatically updates daily with statistics about my repositories a
 Want to create your own? Check out the [documentation](DOCUMENTATION.md) to learn how!
 
 <!-- STATS:START -->
+## 📊 GitHub Statistics
+
+### Repository Overview
+
+<p align="center">
+  <img src="./repo-stats.svg" alt="Repository Statistics" width="500"/>
+</p>
+
+**Total Repositories:** 32 | **Public:** 32 | **Private:** 0
+
+### 💻 Programming Languages
+
+<p align="center">
+  <img src="./languages.svg" alt="Language Distribution" width="500"/>
+</p>
+
+### 🚀 Frameworks & Platforms
+
+<p align="center">
+  <img src="./platforms.svg" alt="Platform Distribution" width="500"/>
+</p>
+
+### 🗄️ Databases
+
+<p align="center">
+  <img src="./databases.svg" alt="Database Distribution" width="500"/>
+</p>
+
+
+*Last updated: Tue, 11 Nov 2025 13:02:31 GMT*
+
 <!-- STATS:END -->
-
-<!--
-**aminusia/aminusia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 400">
+  <style>
+    .chart-title { font: bold 18px Arial; fill: #333; }
+    .legend-text { font: 12px Arial; fill: #666; }
+    .legend-value { font: 12px Arial; fill: #333; }
+    .slice { transition: opacity 0.2s; }
+    .slice:hover { opacity: 0.8; }
+  </style>
+
+  <text x="250" y="30" text-anchor="middle" class="chart-title">Language Distribution</text>
+  <path class="slice" d="M 250 80 A 100 100 0 0 1 349.7905070357953 186.469521275866 L 309.8743042214772 183.88171276551958 A 60 60 0 0 0 250 120 Z" fill="#3178c6"/>
+  <path class="slice" d="M 349.7905070357953 186.469521275866 A 100 100 0 0 1 287.38750725120167 272.7479072623277 L 272.432504350721 235.64874435739662 A 60 60 0 0 0 309.8743042214772 183.88171276551958 Z" fill="#f1e05a"/>
+  <path class="slice" d="M 287.38750725120167 272.7479072623277 A 100 100 0 0 1 195.9961699541724 264.1640442254373 L 217.59770197250342 230.49842653526238 A 60 60 0 0 0 272.432504350721 235.64874435739662 Z" fill="#e34c26"/>
+  <path class="slice" d="M 195.9961699541724 264.1640442254373 A 100 100 0 0 1 152.8042689813478 203.51573668311948 L 191.68256138880867 194.10944200987169 A 60 60 0 0 0 217.59770197250342 230.49842653526238 Z" fill="#563d7c"/>
+  <path class="slice" d="M 152.8042689813478 203.51573668311948 A 100 100 0 0 1 154.72141470404443 149.63569226869615 L 192.83284882242666 161.78141536121768 A 60 60 0 0 0 191.68256138880867 194.10944200987169 Z" fill="#b07219"/>
+  <path class="slice" d="M 154.72141470404443 149.63569226869615 A 100 100 0 0 1 180.46749010340855 108.13046495572404 L 208.28049406204514 136.87827897343442 A 60 60 0 0 0 192.83284882242666 161.78141536121768 Z" fill="#00ADD8"/>
+  <path class="slice" d="M 180.46749010340855 108.13046495572404 A 100 100 0 0 1 221.72935021407667 84.07935383515354 L 233.037610128446 122.44761230109214 A 60 60 0 0 0 208.28049406204514 136.87827897343442 Z" fill="#89e051"/>
+  <path class="slice" d="M 221.72935021407667 84.07935383515354 A 100 100 0 0 1 235.6892552188595 81.02928421088862 L 241.4135531313157 120.61757052653317 A 60 60 0 0 0 233.037610128446 122.44761230109214 Z" fill="#f34b7d"/>
+  <circle cx="250" cy="180" r="60" fill="white"/>
+  <rect x="30" y="220" width="15" height="15" fill="#3178c6"/>
+  <text x="52" y="232" class="legend-text">PHP</text>
+  <text x="470" y="232" text-anchor="end" class="legend-value">26.0%</text>
+  <rect x="30" y="245" width="15" height="15" fill="#f1e05a"/>
+  <text x="52" y="257" class="legend-text">JavaScript</text>
+  <text x="470" y="257" text-anchor="end" class="legend-value">17.9%</text>
+  <rect x="30" y="270" width="15" height="15" fill="#e34c26"/>
+  <text x="52" y="282" class="legend-text">CSS</text>
+  <text x="470" y="282" text-anchor="end" class="legend-value">15.2%</text>
+  <rect x="30" y="295" width="15" height="15" fill="#563d7c"/>
+  <text x="52" y="307" class="legend-text">C++</text>
+  <text x="470" y="307" text-anchor="end" class="legend-value">12.1%</text>
+  <rect x="30" y="320" width="15" height="15" fill="#b07219"/>
+  <text x="52" y="332" class="legend-text">C</text>
+  <text x="470" y="332" text-anchor="end" class="legend-value">8.7%</text>
+  <rect x="30" y="345" width="15" height="15" fill="#00ADD8"/>
+  <text x="52" y="357" class="legend-text">HTML</text>
+  <text x="470" y="357" text-anchor="end" class="legend-value">7.9%</text>
+  <rect x="30" y="370" width="15" height="15" fill="#89e051"/>
+  <text x="52" y="382" class="legend-text">C#</text>
+  <text x="470" y="382" text-anchor="end" class="legend-value">7.7%</text>
+  <rect x="30" y="395" width="15" height="15" fill="#f34b7d"/>
+  <text x="52" y="407" class="legend-text">SCSS</text>
+  <text x="470" y="407" text-anchor="end" class="legend-value">2.3%</text>
+</svg>
