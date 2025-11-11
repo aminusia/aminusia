@@ -18,6 +18,22 @@ This project automatically updates your GitHub profile README with statistics ab
 4. Updates the README.md file with formatted statistics
 5. GitHub Actions commits the changes automatically
 
+## Quick Start
+
+**Ready to use immediately!** This repository is already configured and ready to go:
+
+1. **Merge this PR** to your main branch
+2. **Check the Actions tab** - the workflow will run automatically:
+   - Every day at midnight UTC
+   - Whenever you push to main
+   - Or manually trigger it from the Actions tab
+3. **View your profile** at `https://github.com/aminusia` to see the statistics!
+
+That's it! No additional setup required. The workflow uses the built-in `GITHUB_TOKEN` automatically.
+
+See [EXAMPLE_OUTPUT.md](EXAMPLE_OUTPUT.md) for what your README will look like after the first run.
+
+
 ## Setup Instructions
 
 ### Prerequisites
