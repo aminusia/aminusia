@@ -104,7 +104,10 @@ async function detectPlatformsAndDatabases(
   stats: RepoStats
 ): Promise<void> {
   try {
-    // Check for common framework/platform files
+  // Track whether we've already detected a database for this repository
+  let dbDetected = false;
+
+  // Check for common framework/platform files
     const filesToCheck = [
       'package.json',
       'composer.json',
@@ -142,11 +145,11 @@ async function detectPlatformsAndDatabases(
             stats.platforms['Node.js'] = (stats.platforms['Node.js'] || 0) + 1;
             
             // Detect databases from Node.js dependencies
-            if (deps['mongoose'] || deps['mongodb']) stats.databases['MongoDB'] = (stats.databases['MongoDB'] || 0) + 1;
-            if (deps['mysql'] || deps['mysql2']) stats.databases['MySQL'] = (stats.databases['MySQL'] || 0) + 1;
-            if (deps['pg'] || deps['postgres']) stats.databases['PostgreSQL'] = (stats.databases['PostgreSQL'] || 0) + 1;
-            if (deps['redis']) stats.databases['Redis'] = (stats.databases['Redis'] || 0) + 1;
-            if (deps['sqlite3'] || deps['better-sqlite3']) stats.databases['SQLite'] = (stats.databases['SQLite'] || 0) + 1;
+            if (deps['mongoose'] || deps['mongodb']) { stats.databases['MongoDB'] = (stats.databases['MongoDB'] || 0) + 1; dbDetected = true; }
+            if (deps['mysql'] || deps['mysql2']) { stats.databases['MySQL'] = (stats.databases['MySQL'] || 0) + 1; dbDetected = true; }
+            if (deps['pg'] || deps['postgres']) { stats.databases['PostgreSQL'] = (stats.databases['PostgreSQL'] || 0) + 1; dbDetected = true; }
+            if (deps['redis']) { stats.databases['Redis'] = (stats.databases['Redis'] || 0) + 1; dbDetected = true; }
+            if (deps['sqlite3'] || deps['better-sqlite3']) { stats.databases['SQLite'] = (stats.databases['SQLite'] || 0) + 1; dbDetected = true; }
           } else if (file === 'composer.json') {
             const composerJson = JSON.parse(content);
             const deps = { ...composerJson.require, ...composerJson['require-dev'] };
@@ -155,21 +158,27 @@ async function detectPlatformsAndDatabases(
             if (deps['symfony/symfony']) stats.platforms['Symfony'] = (stats.platforms['Symfony'] || 0) + 1;
             
             // Detect databases from PHP dependencies
-            if (content.includes('mongodb')) stats.databases['MongoDB'] = (stats.databases['MongoDB'] || 0) + 1;
-            if (content.includes('mysql')) stats.databases['MySQL'] = (stats.databases['MySQL'] || 0) + 1;
-            if (content.includes('pgsql') || content.includes('postgres')) stats.databases['PostgreSQL'] = (stats.databases['PostgreSQL'] || 0) + 1;
-            if (content.includes('redis')) stats.databases['Redis'] = (stats.databases['Redis'] || 0) + 1;
+            if (content.includes('mongodb')) { stats.databases['MongoDB'] = (stats.databases['MongoDB'] || 0) + 1; dbDetected = true; }
+            if (content.includes('mysql')) { stats.databases['MySQL'] = (stats.databases['MySQL'] || 0) + 1; dbDetected = true; }
+            if (content.includes('pgsql') || content.includes('postgres')) { stats.databases['PostgreSQL'] = (stats.databases['PostgreSQL'] || 0) + 1; dbDetected = true; }
+            if (content.includes('redis')) { stats.databases['Redis'] = (stats.databases['Redis'] || 0) + 1; dbDetected = true; }
+
+            // If this is a Laravel project and no database was detected so far, count it as MySQL
+            if (deps['laravel/framework'] && !dbDetected) {
+              stats.databases['MySQL'] = (stats.databases['MySQL'] || 0) + 1;
+              dbDetected = true;
+            }
           } else if (file === 'requirements.txt') {
             if (content.includes('django')) stats.platforms['Django'] = (stats.platforms['Django'] || 0) + 1;
             if (content.includes('flask')) stats.platforms['Flask'] = (stats.platforms['Flask'] || 0) + 1;
             if (content.includes('fastapi')) stats.platforms['FastAPI'] = (stats.platforms['FastAPI'] || 0) + 1;
             
             // Detect databases from Python dependencies
-            if (content.includes('pymongo') || content.includes('motor')) stats.databases['MongoDB'] = (stats.databases['MongoDB'] || 0) + 1;
-            if (content.includes('mysql') || content.includes('pymysql')) stats.databases['MySQL'] = (stats.databases['MySQL'] || 0) + 1;
-            if (content.includes('psycopg') || content.includes('asyncpg')) stats.databases['PostgreSQL'] = (stats.databases['PostgreSQL'] || 0) + 1;
-            if (content.includes('redis')) stats.databases['Redis'] = (stats.databases['Redis'] || 0) + 1;
-            if (content.includes('sqlite')) stats.databases['SQLite'] = (stats.databases['SQLite'] || 0) + 1;
+            if (content.includes('pymongo') || content.includes('motor')) { stats.databases['MongoDB'] = (stats.databases['MongoDB'] || 0) + 1; dbDetected = true; }
+            if (content.includes('mysql') || content.includes('pymysql')) { stats.databases['MySQL'] = (stats.databases['MySQL'] || 0) + 1; dbDetected = true; }
+            if (content.includes('psycopg') || content.includes('asyncpg')) { stats.databases['PostgreSQL'] = (stats.databases['PostgreSQL'] || 0) + 1; dbDetected = true; }
+            if (content.includes('redis')) { stats.databases['Redis'] = (stats.databases['Redis'] || 0) + 1; dbDetected = true; }
+            if (content.includes('sqlite')) { stats.databases['SQLite'] = (stats.databases['SQLite'] || 0) + 1; dbDetected = true; }
           }
         }
       } catch (error) {
@@ -200,7 +209,7 @@ function generateDonutChartSVG(
   colorPalette: string[]
 ): string {
   const width = 500;
-  const height = 400;
+  const height = 500;
   const centerX = 250;
   const centerY = 180;
   const radius = 100;
