@@ -88,8 +88,8 @@ async function fetchRepositoryStats(): Promise<RepoStats> {
 
         // Detect platforms and databases
         await detectPlatformsAndDatabases(octokit, repo.owner.login, repo.name, stats);
-  // Aggregate commit activity for this repository (weekly -> monthly)
-  await aggregateRepoCommitActivity(octokit, repo.owner.login, repo.name, stats);
+        // Aggregate commit activity for this repository (weekly -> monthly)
+        await aggregateRepoCommitActivity(octokit, repo.owner.login, repo.name, stats);
       } catch (error) {
         console.warn(`Failed to fetch data for ${repo.full_name}:`, error);
       }
@@ -182,7 +182,7 @@ function generateBarChartSVG(
   barColor = '#16a34a'
 ): string {
   const width = 800;
-  const height = 260;
+  const height = 200;
   const padding = { top: 40, right: 30, bottom: 50, left: 50 };
   const chartWidth = width - padding.left - padding.right;
   const chartHeight = height - padding.top - padding.bottom;
@@ -200,7 +200,7 @@ function generateBarChartSVG(
   let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
   <style>
     .chart-title { font: bold 18px Arial; fill: #333; }
-    .axis-label { font: 12px Arial; fill: #666; }
+    .axis-label { font: 10px Arial; fill: #666; }
   </style>
   <text x="${width / 2}" y="20" text-anchor="middle" class="chart-title">${title}</text>
   <g transform="translate(${padding.left}, ${padding.top})">
@@ -226,26 +226,22 @@ function generateBarChartSVG(
 }
 
 function generateActivitiesChart(stats: RepoStats): string {
-  // Determine the last 12 months (YYYY-MM) in chronological order
-  const months: string[] = [];
-  const now = new Date();
-  for (let i = 11; i >= 0; i--) {
-    const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - i, 1));
-    months.push(`${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}`);
-  }
+  // Get all months from activities and sort chronologically
+  const months: string[] = Object.keys(stats.activities).sort();
 
   const data = months.map(m => ({ name: m, value: stats.activities[m] || 0 }));
 
-  // Convert month names to shorter labels for display (e.g., '2024-11' -> 'Nov')
+  // Convert month names to labels: only show year on January, otherwise empty
+  // e.g. '2024-01' -> '2024', '2024-02' -> ''
   const labels = data.map(d => {
     const [y, mm] = d.name.split('-');
-    const dt = new Date(Number(y), Number(mm) - 1, 1);
-    return dt.toLocaleString('en-US', { month: 'short' });
+    if (mm === '01') return y;
+    return '';
   });
 
   const chartData = data.map((d, i) => ({ name: labels[i], value: d.value }));
 
-  return generateBarChartSVG(chartData, 'Activities — Monthly Commits (last 12 months)', '#16a34a');
+  return generateBarChartSVG(chartData, 'All Time Monthly Commits', '#16a34a');
 }
 
 async function detectPlatformsAndDatabases(
@@ -255,10 +251,10 @@ async function detectPlatformsAndDatabases(
   stats: RepoStats
 ): Promise<void> {
   try {
-  // Track whether we've already detected a database for this repository
-  let dbDetected = false;
+    // Track whether we've already detected a database for this repository
+    let dbDetected = false;
 
-  // Check for common framework/platform files
+    // Check for common framework/platform files
     const filesToCheck = [
       'package.json',
       'composer.json',
@@ -278,12 +274,12 @@ async function detectPlatformsAndDatabases(
 
         if ('content' in data && data.content) {
           const content = Buffer.from(data.content, 'base64').toString('utf-8');
-          
+
           // Detect platforms/frameworks
           if (file === 'package.json') {
             const packageJson = JSON.parse(content);
             const deps = { ...packageJson.dependencies, ...packageJson.devDependencies };
-            
+
             if (deps['next'] || deps['@next/core']) stats.platforms['Next.js'] = (stats.platforms['Next.js'] || 0) + 1;
             if (deps['vue'] || deps['@vue/core']) stats.platforms['Vue.js'] = (stats.platforms['Vue.js'] || 0) + 1;
             if (deps['react'] || deps['@react/core']) stats.platforms['React'] = (stats.platforms['React'] || 0) + 1;
@@ -291,10 +287,10 @@ async function detectPlatformsAndDatabases(
             if (deps['@nestjs/core']) stats.platforms['NestJS'] = (stats.platforms['NestJS'] || 0) + 1;
             if (deps['nuxt'] || deps['nuxt3']) stats.platforms['Nuxt.js'] = (stats.platforms['Nuxt.js'] || 0) + 1;
             if (deps['svelte']) stats.platforms['Svelte'] = (stats.platforms['Svelte'] || 0) + 1;
-            
+
             // Node.js is implied if package.json exists
             stats.platforms['Node.js'] = (stats.platforms['Node.js'] || 0) + 1;
-            
+
             // Detect databases from Node.js dependencies
             if (deps['mongoose'] || deps['mongodb']) { stats.databases['MongoDB'] = (stats.databases['MongoDB'] || 0) + 1; dbDetected = true; }
             if (deps['mysql'] || deps['mysql2']) { stats.databases['MySQL'] = (stats.databases['MySQL'] || 0) + 1; dbDetected = true; }
@@ -304,10 +300,10 @@ async function detectPlatformsAndDatabases(
           } else if (file === 'composer.json') {
             const composerJson = JSON.parse(content);
             const deps = { ...composerJson.require, ...composerJson['require-dev'] };
-            
+
             if (deps['laravel/framework']) stats.platforms['Laravel'] = (stats.platforms['Laravel'] || 0) + 1;
             if (deps['symfony/symfony']) stats.platforms['Symfony'] = (stats.platforms['Symfony'] || 0) + 1;
-            
+
             // Detect databases from PHP dependencies
             if (content.includes('mongodb')) { stats.databases['MongoDB'] = (stats.databases['MongoDB'] || 0) + 1; dbDetected = true; }
             if (content.includes('mysql')) { stats.databases['MySQL'] = (stats.databases['MySQL'] || 0) + 1; dbDetected = true; }
@@ -323,7 +319,7 @@ async function detectPlatformsAndDatabases(
             if (content.includes('django')) stats.platforms['Django'] = (stats.platforms['Django'] || 0) + 1;
             if (content.includes('flask')) stats.platforms['Flask'] = (stats.platforms['Flask'] || 0) + 1;
             if (content.includes('fastapi')) stats.platforms['FastAPI'] = (stats.platforms['FastAPI'] || 0) + 1;
-            
+
             // Detect databases from Python dependencies
             if (content.includes('pymongo') || content.includes('motor')) { stats.databases['MongoDB'] = (stats.databases['MongoDB'] || 0) + 1; dbDetected = true; }
             if (content.includes('mysql') || content.includes('pymysql')) { stats.databases['MySQL'] = (stats.databases['MySQL'] || 0) + 1; dbDetected = true; }
@@ -365,7 +361,7 @@ function generateDonutChartSVG(
   const centerY = 180;
   const radius = 100;
   const innerRadius = 60;
-  
+
   if (data.length === 0) {
     return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">
       <text x="${centerX}" y="${centerY}" text-anchor="middle" font-family="Arial" font-size="16" fill="#666">
@@ -387,36 +383,36 @@ function generateDonutChartSVG(
 `;
 
   let currentAngle = -90; // Start at top
-  
+
   // Draw donut slices
   data.forEach((item, index) => {
     const sliceAngle = (item.percentage / 100) * 360;
     const startAngle = currentAngle;
     const endAngle = currentAngle + sliceAngle;
-    
+
     const startRad = (startAngle * Math.PI) / 180;
     const endRad = (endAngle * Math.PI) / 180;
-    
+
     const x1 = centerX + radius * Math.cos(startRad);
     const y1 = centerY + radius * Math.sin(startRad);
     const x2 = centerX + radius * Math.cos(endRad);
     const y2 = centerY + radius * Math.sin(endRad);
-    
+
     const x3 = centerX + innerRadius * Math.cos(endRad);
     const y3 = centerY + innerRadius * Math.sin(endRad);
     const x4 = centerX + innerRadius * Math.cos(startRad);
     const y4 = centerY + innerRadius * Math.sin(startRad);
-    
+
     const largeArc = sliceAngle > 180 ? 1 : 0;
-    
+
     const color = colorPalette[index % colorPalette.length];
-    
+
     svg += `  <path class="slice" d="M ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} L ${x3} ${y3} A ${innerRadius} ${innerRadius} 0 ${largeArc} 0 ${x4} ${y4} Z" fill="${color}"/>
 `;
-    
+
     currentAngle = endAngle;
   });
-  
+
   // Draw center circle
   svg += `  <circle cx="${centerX}" cy="${centerY}" r="${innerRadius}" fill="white"/>
 `;
@@ -425,7 +421,7 @@ function generateDonutChartSVG(
   const legendX = 30;
   let legendY = 220;
   const legendItemHeight = 25;
-  
+
   data.forEach((item, index) => {
     const color = colorPalette[index % colorPalette.length];
     svg += `  <rect x="${legendX}" y="${legendY}" width="15" height="15" fill="${color}"/>
@@ -434,9 +430,9 @@ function generateDonutChartSVG(
 `;
     legendY += legendItemHeight;
   });
-  
+
   svg += '</svg>';
-  
+
   return svg;
 }
 
@@ -445,24 +441,24 @@ function generateRepoStatsChart(stats: RepoStats): string {
     { name: 'Public', value: stats.publicRepos, percentage: (stats.publicRepos / stats.totalRepos) * 100 },
     { name: 'Private', value: stats.privateRepos, percentage: (stats.privateRepos / stats.totalRepos) * 100 },
   ];
-  
+
   const colors = ['#3b82f6', '#8b5cf6'];
-  
+
   return generateDonutChartSVG(data, 'Repository Statistics', colors);
 }
 
 function generateLanguageChart(stats: RepoStats): string {
   const languages = calculateLanguagePercentages(stats);
   const topLanguages = languages.slice(0, 8); // Top 8 languages
-  
+
   const data = topLanguages.map(lang => ({
     name: lang.language,
     value: lang.bytes,
     percentage: lang.percentage,
   }));
-  
+
   const colors = ['#3178c6', '#f1e05a', '#e34c26', '#563d7c', '#b07219', '#00ADD8', '#89e051', '#f34b7d'];
-  
+
   return generateDonutChartSVG(data, 'Language Distribution', colors);
 }
 
@@ -471,20 +467,20 @@ function generatePlatformChart(stats: RepoStats): string {
     platform,
     count,
   }));
-  
+
   platforms.sort((a, b) => b.count - a.count);
-  
+
   const topPlatforms = platforms.slice(0, 8);
   const totalPlatforms = topPlatforms.reduce((sum, p) => sum + p.count, 0);
-  
+
   const data = topPlatforms.map(p => ({
     name: p.platform,
     value: p.count,
     percentage: (p.count / totalPlatforms) * 100,
   }));
-  
+
   const colors = ['#61dafb', '#42b883', '#000000', '#339933', '#cc6699', '#00d8ff', '#ff6b6b', '#4fc08d'];
-  
+
   return generateDonutChartSVG(data, 'Platform Distribution', colors);
 }
 
@@ -493,24 +489,24 @@ function generateDatabaseChart(stats: RepoStats): string {
     database,
     count,
   }));
-  
+
   databases.sort((a, b) => b.count - a.count);
-  
+
   const topDatabases = databases.slice(0, 8);
   const totalDatabases = topDatabases.reduce((sum, d) => sum + d.count, 0);
-  
+
   if (totalDatabases === 0) {
     return generateDonutChartSVG([], 'Database Distribution', []);
   }
-  
+
   const data = topDatabases.map(d => ({
     name: d.database,
     value: d.count,
     percentage: (d.count / totalDatabases) * 100,
   }));
-  
+
   const colors = ['#4db33d', '#00758f', '#336791', '#dc382d', '#003545', '#ffca28', '#ea2845', '#13aa52'];
-  
+
   return generateDonutChartSVG(data, 'Database Distribution', colors);
 }
 
@@ -522,25 +518,25 @@ function saveSVGFile(filename: string, svgContent: string): void {
 
 function generateStatsMarkdown(stats: RepoStats): string {
   let markdown = '## 📊 GitHub Statistics\n\n';
-  
+
   markdown += '### Repository Overview\n\n';
   markdown += '<p align="center">\n';
   markdown += '  <img src="./repo-stats.svg" alt="Repository Statistics" width="500"/>\n';
   markdown += '</p>\n\n';
   markdown += `**Total Repositories:** ${stats.totalRepos} | **Public:** ${stats.publicRepos} | **Private:** ${stats.privateRepos}\n\n`;
-  
+
   markdown += '### 💻 Programming Languages\n\n';
   markdown += '<p align="center">\n';
   markdown += '  <img src="./languages.svg" alt="Language Distribution" width="500"/>\n';
   markdown += '</p>\n\n';
-  
+
   if (Object.keys(stats.platforms).length > 0) {
     markdown += '### 🚀 Frameworks & Platforms\n\n';
     markdown += '<p align="center">\n';
     markdown += '  <img src="./platforms.svg" alt="Platform Distribution" width="500"/>\n';
     markdown += '</p>\n\n';
   }
-  
+
   if (Object.keys(stats.databases).length > 0) {
     markdown += '### 🗄️ Databases\n\n';
     markdown += '<p align="center">\n';
@@ -561,17 +557,17 @@ function generateStatsMarkdown(stats: RepoStats): string {
 
 async function updateReadme(statsMarkdown: string): Promise<void> {
   const readmePath = path.join(__dirname, '..', 'README.md');
-  
+
   let readmeContent = fs.readFileSync(readmePath, 'utf8');
-  
+
   // Define markers for the stats section
   const startMarker = '<!-- STATS:START -->';
   const endMarker = '<!-- STATS:END -->';
-  
+
   // Check if markers exist
   const startIndex = readmeContent.indexOf(startMarker);
   const endIndex = readmeContent.indexOf(endMarker);
-  
+
   if (startIndex !== -1 && endIndex !== -1) {
     // Replace content between markers
     const before = readmeContent.substring(0, startIndex + startMarker.length);
@@ -584,7 +580,7 @@ async function updateReadme(statsMarkdown: string): Promise<void> {
     }
     readmeContent += `\n${startMarker}\n${statsMarkdown}\n${endMarker}\n`;
   }
-  
+
   fs.writeFileSync(readmePath, readmeContent, 'utf8');
   console.log('README.md updated successfully!');
 }
@@ -592,7 +588,7 @@ async function updateReadme(statsMarkdown: string): Promise<void> {
 async function main(): Promise<void> {
   try {
     console.log('Starting GitHub profile update...');
-    
+
     const stats = await fetchRepositoryStats();
     console.log(`\nFetched statistics for ${stats.totalRepos} repositories`);
     console.log(`Found ${Object.keys(stats.languages).length} different languages`);
@@ -602,23 +598,23 @@ async function main(): Promise<void> {
     // Generate SVG files
     const repoStatsSVG = generateRepoStatsChart(stats);
     saveSVGFile('repo-stats.svg', repoStatsSVG);
-    
+
     const languageSVG = generateLanguageChart(stats);
     saveSVGFile('languages.svg', languageSVG);
-    
+
     const platformSVG = generatePlatformChart(stats);
     saveSVGFile('platforms.svg', platformSVG);
-    
+
     const databaseSVG = generateDatabaseChart(stats);
     saveSVGFile('databases.svg', databaseSVG);
 
-  const activitiesSVG = generateActivitiesChart(stats);
-  saveSVGFile('activities.svg', activitiesSVG);
-    
+    const activitiesSVG = generateActivitiesChart(stats);
+    saveSVGFile('activities.svg', activitiesSVG);
+
     // Generate and update README
     const statsMarkdown = generateStatsMarkdown(stats);
     await updateReadme(statsMarkdown);
-    
+
     console.log('\nProfile update completed successfully!');
   } catch (error) {
     console.error('Error updating profile:', error);
