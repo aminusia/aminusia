@@ -8,36 +8,36 @@
   </style>
 
   <text x="250" y="30" text-anchor="middle" class="chart-title">Platform Distribution</text>
-  <path class="slice" d="M 250 80 A 100 100 0 0 1 270.54575932064785 277.86660193313145 L 262.32745559238873 238.7199611598789 A 60 60 0 0 0 250 120 Z" fill="#61dafb"/>
-  <path class="slice" d="M 270.54575932064785 277.86660193313145 A 100 100 0 0 1 180.2939799402543 251.7012605707203 L 208.17638796415258 223.02075634243218 A 60 60 0 0 0 262.32745559238873 238.7199611598789 Z" fill="#42b883"/>
-  <path class="slice" d="M 180.2939799402543 251.7012605707203 A 100 100 0 0 1 152.7520398182898 203.29880341340538 L 191.65122389097388 193.97928204804325 A 60 60 0 0 0 208.17638796415258 223.02075634243218 Z" fill="#000000"/>
-  <path class="slice" d="M 152.7520398182898 203.29880341340538 A 100 100 0 0 1 154.22105469686346 151.25293690446307 L 192.5326328181181 162.75176214267785 A 60 60 0 0 0 191.65122389097388 193.97928204804325 Z" fill="#339933"/>
-  <path class="slice" d="M 154.22105469686346 151.25293690446307 A 100 100 0 0 1 176.36058724251734 112.34472017105318 L 205.81635234551038 139.4068321026319 A 60 60 0 0 0 192.5326328181181 162.75176214267785 Z" fill="#cc6699"/>
-  <path class="slice" d="M 176.36058724251734 112.34472017105318 A 100 100 0 0 1 209.7851270230446 88.44256452123979 L 225.87107621382674 125.06553871274386 A 60 60 0 0 0 205.81635234551038 139.4068321026319 Z" fill="#00d8ff"/>
-  <path class="slice" d="M 209.7851270230446 88.44256452123979 A 100 100 0 0 1 242.48232632083923 80.28297746897145 L 245.48939579250353 120.16978648138287 A 60 60 0 0 0 225.87107621382674 125.06553871274386 Z" fill="#ff6b6b"/>
-  <path class="slice" d="M 242.48232632083923 80.28297746897145 A 100 100 0 0 1 249.99999999999997 80 L 250 120 A 60 60 0 0 0 245.48939579250353 120.16978648138287 Z" fill="#4fc08d"/>
+  <path class="slice" d="M 250 80 A 100 100 0 0 1 271.9946357839669 277.55119679804363 L 263.19678147038013 238.5307180788262 A 60 60 0 0 0 250 120 Z" fill="#61dafb"/>
+  <path class="slice" d="M 271.9946357839669 277.55119679804363 A 100 100 0 0 1 182.63043563534427 253.90089172206592 L 209.57826138120657 224.34053503323955 A 60 60 0 0 0 263.19678147038013 238.5307180788262 Z" fill="#42b883"/>
+  <path class="slice" d="M 182.63043563534427 253.90089172206592 A 100 100 0 0 1 153.8174356827181 207.3662990072083 L 192.29046140963086 196.41977940432497 A 60 60 0 0 0 209.57826138120657 224.34053503323955 Z" fill="#000000"/>
+  <path class="slice" d="M 153.8174356827181 207.3662990072083 A 100 100 0 0 1 152.8718968083886 156.20648049573816 L 191.72313808503316 165.7238882974429 A 60 60 0 0 0 192.29046140963086 196.41977940432497 Z" fill="#339933"/>
+  <path class="slice" d="M 152.8718968083886 156.20648049573816 A 100 100 0 0 1 174.86681104431264 114.00754651212777 L 204.9200866265876 140.40452790727667 A 60 60 0 0 0 191.72313808503316 165.7238882974429 Z" fill="#cc6699"/>
+  <path class="slice" d="M 174.86681104431264 114.00754651212777 A 100 100 0 0 1 210.45487931294568 88.15130142540774 L 226.2729275877674 124.89078085524463 A 60 60 0 0 0 204.9200866265876 140.40452790727667 Z" fill="#00d8ff"/>
+  <path class="slice" d="M 210.45487931294568 88.15130142540774 A 100 100 0 0 1 242.61474725251253 80.2730826614212 L 245.5688483515075 120.16384959685271 A 60 60 0 0 0 226.2729275877674 124.89078085524463 Z" fill="#ff6b6b"/>
+  <path class="slice" d="M 242.61474725251253 80.2730826614212 A 100 100 0 0 1 249.99999999999997 80 L 250 120 A 60 60 0 0 0 245.5688483515075 120.16384959685271 Z" fill="#4fc08d"/>
   <circle cx="250" cy="180" r="60" fill="white"/>
   <rect x="30" y="220" width="15" height="15" fill="#61dafb"/>
   <text x="52" y="232" class="legend-text">Node.js</text>
-  <text x="470" y="232" text-anchor="end" class="legend-value">46.7%</text>
+  <text x="470" y="232" text-anchor="end" class="legend-value">46.5%</text>
   <rect x="30" y="245" width="15" height="15" fill="#42b883"/>
   <text x="52" y="257" class="legend-text">Laravel</text>
-  <text x="470" y="257" text-anchor="end" class="legend-value">15.6%</text>
+  <text x="470" y="257" text-anchor="end" class="legend-value">15.3%</text>
   <rect x="30" y="270" width="15" height="15" fill="#000000"/>
   <text x="52" y="282" class="legend-text">React</text>
-  <text x="470" y="282" text-anchor="end" class="legend-value">9.0%</text>
+  <text x="470" y="282" text-anchor="end" class="legend-value">8.8%</text>
   <rect x="30" y="295" width="15" height="15" fill="#339933"/>
   <text x="52" y="307" class="legend-text">Express</text>
-  <text x="470" y="307" text-anchor="end" class="legend-value">8.4%</text>
+  <text x="470" y="307" text-anchor="end" class="legend-value">8.2%</text>
   <rect x="30" y="320" width="15" height="15" fill="#cc6699"/>
   <text x="52" y="332" class="legend-text">Nuxt.js</text>
-  <text x="470" y="332" text-anchor="end" class="legend-value">7.2%</text>
+  <text x="470" y="332" text-anchor="end" class="legend-value">7.6%</text>
   <rect x="30" y="345" width="15" height="15" fill="#00d8ff"/>
   <text x="52" y="357" class="legend-text">Vue.js</text>
-  <text x="470" y="357" text-anchor="end" class="legend-value">6.6%</text>
+  <text x="470" y="357" text-anchor="end" class="legend-value">7.1%</text>
   <rect x="30" y="370" width="15" height="15" fill="#ff6b6b"/>
   <text x="52" y="382" class="legend-text">Next.js</text>
-  <text x="470" y="382" text-anchor="end" class="legend-value">5.4%</text>
+  <text x="470" y="382" text-anchor="end" class="legend-value">5.3%</text>
   <rect x="30" y="395" width="15" height="15" fill="#4fc08d"/>
   <text x="52" y="407" class="legend-text">FastAPI</text>
   <text x="470" y="407" text-anchor="end" class="legend-value">1.2%</text>
