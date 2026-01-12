@@ -1,6 +1,25 @@
+<!-- PROFILE INTRO: concise, recruiter-friendly, and non-disruptive to current employer -->
+<p align="center">
+  <strong>Senior Full‑Stack Engineer<br />PHP · Node.js · TypeScript · Flutter · Nuxt.js/Next.js ·  Cloudflare & AWS · Docker · Github Action CI/CD</strong>
+</p>
+
 ## Hi there 👋
 
-I'm a developer passionate about creating amazing things with code!
+ I maintain a broad codebase with steady contributions across backend systems, web platforms, mobile platforms, and data-driven services.
+ 
+ My work focuses on pragmatic engineering: shipping reliable, maintainable systems, improving observability, and mentoring teams. 
+ 
+ I currently work extensively with TypeScript, Flutter, Node.js, Nuxt.js, Next.js, Cloudflare (DNS/Pages/Workers), AWS, Docker, and MongoDB.
+ 
+ My past experiences shown here as key signals from this profile: PHP (52.9%), Node.js ecosystem (46.5%), and MySQL (53.2%).
+
+Email: aminusia@gmail.com
+
+LinkedIn: https://www.linkedin.com/in/andi-suryono/
+
+---
+<i>I am passionate about creating amazing things with code!</i>
+---
 
 ### 🚀 About This Profile
 
