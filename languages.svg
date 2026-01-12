@@ -8,37 +8,37 @@
   </style>
 
   <text x="250" y="30" text-anchor="middle" class="chart-title">Language Distribution</text>
-  <path class="slice" d="M 250 80 A 100 100 0 1 1 231.7379758153183 278.31835267475805 L 239.04278548919098 238.9910116048548 A 60 60 0 1 0 250 120 Z" fill="#3178c6"/>
-  <path class="slice" d="M 231.7379758153183 278.31835267475805 A 100 100 0 0 1 153.97358817681308 207.90928577308466 L 192.38415290608785 196.7455714638508 A 60 60 0 0 0 239.04278548919098 238.9910116048548 Z" fill="#f1e05a"/>
-  <path class="slice" d="M 153.97358817681308 207.90928577308466 A 100 100 0 0 1 150.17825267393624 174.0318544947797 L 190.10695160436174 176.41911269686784 A 60 60 0 0 0 192.38415290608785 196.7455714638508 Z" fill="#e34c26"/>
-  <path class="slice" d="M 150.17825267393624 174.0318544947797 A 100 100 0 0 1 156.45602792788011 144.6513750059432 L 193.87361675672807 158.79082500356594 A 60 60 0 0 0 190.10695160436174 176.41911269686784 Z" fill="#563d7c"/>
-  <path class="slice" d="M 156.45602792788011 144.6513750059432 A 100 100 0 0 1 171.12107050439266 118.53363129623645 L 202.67264230263558 143.12017877774187 A 60 60 0 0 0 193.87361675672807 158.79082500356594 Z" fill="#b07219"/>
-  <path class="slice" d="M 171.12107050439266 118.53363129623645 A 100 100 0 0 1 186.1340401092697 103.05106129883512 L 211.68042406556182 133.83063677930107 A 60 60 0 0 0 202.67264230263558 143.12017877774187 Z" fill="#00ADD8"/>
-  <path class="slice" d="M 186.1340401092697 103.05106129883512 A 100 100 0 0 1 203.4884110361393 91.47501995449606 L 222.09304662168358 126.88501197269764 A 60 60 0 0 0 211.68042406556182 133.83063677930107 Z" fill="#89e051"/>
-  <path class="slice" d="M 203.4884110361393 91.47501995449606 A 100 100 0 0 1 215.09351545712207 86.29014279779409 L 229.05610927427324 123.77408567867644 A 60 60 0 0 0 222.09304662168358 126.88501197269764 Z" fill="#f34b7d"/>
+  <path class="slice" d="M 250 80 A 100 100 0 0 1 261.48494837325234 279.33829050705333 L 256.8909690239514 239.60297430423202 A 60 60 0 0 0 250 120 Z" fill="#3178c6"/>
+  <path class="slice" d="M 261.48494837325234 279.33829050705333 A 100 100 0 0 1 165.30577775462834 233.16849366167514 L 199.18346665277699 211.9010961970051 A 60 60 0 0 0 256.8909690239514 239.60297430423202 Z" fill="#f1e05a"/>
+  <path class="slice" d="M 165.30577775462834 233.16849366167514 A 100 100 0 0 1 151.54337038147543 197.50120236328547 L 190.92602222888524 190.50072141797128 A 60 60 0 0 0 199.18346665277699 211.9010961970051 Z" fill="#e34c26"/>
+  <path class="slice" d="M 151.54337038147543 197.50120236328547 A 100 100 0 0 1 150.92162213837844 166.45470412616487 L 190.55297328302706 171.8728224756989 A 60 60 0 0 0 190.92602222888524 190.50072141797128 Z" fill="#563d7c"/>
+  <path class="slice" d="M 150.92162213837844 166.45470412616487 A 100 100 0 0 1 159.51585354430665 137.42513370326765 L 195.709512126584 154.4550802219606 A 60 60 0 0 0 190.55297328302706 171.8728224756989 Z" fill="#b07219"/>
+  <path class="slice" d="M 159.51585354430665 137.42513370326765 A 100 100 0 0 1 174.95209933374707 113.91057115099095 L 204.97125960024823 140.34634269059455 A 60 60 0 0 0 195.709512126584 154.4550802219606 Z" fill="#00ADD8"/>
+  <path class="slice" d="M 174.95209933374707 113.91057115099095 A 100 100 0 0 1 189.31284028858815 100.52001103320666 L 213.58770417315287 132.312006619924 A 60 60 0 0 0 204.97125960024823 140.34634269059455 Z" fill="#89e051"/>
+  <path class="slice" d="M 189.31284028858815 100.52001103320666 A 100 100 0 0 1 205.43452365270983 90.47950894940801 L 223.2607141916259 126.28770536964481 A 60 60 0 0 0 213.58770417315287 132.312006619924 Z" fill="#f34b7d"/>
   <circle cx="250" cy="180" r="60" fill="white"/>
   <rect x="30" y="220" width="15" height="15" fill="#3178c6"/>
   <text x="52" y="232" class="legend-text">PHP</text>
-  <text x="470" y="232" text-anchor="end" class="legend-value">52.9%</text>
+  <text x="470" y="232" text-anchor="end" class="legend-value">48.2%</text>
   <rect x="30" y="245" width="15" height="15" fill="#f1e05a"/>
   <text x="52" y="257" class="legend-text">JavaScript</text>
-  <text x="470" y="257" text-anchor="end" class="legend-value">17.6%</text>
+  <text x="470" y="257" text-anchor="end" class="legend-value">17.9%</text>
   <rect x="30" y="270" width="15" height="15" fill="#e34c26"/>
-  <text x="52" y="282" class="legend-text">Python</text>
-  <text x="470" y="282" text-anchor="end" class="legend-value">5.5%</text>
+  <text x="52" y="282" class="legend-text">C#</text>
+  <text x="470" y="282" text-anchor="end" class="legend-value">6.1%</text>
   <rect x="30" y="295" width="15" height="15" fill="#563d7c"/>
-  <text x="52" y="307" class="legend-text">HTML</text>
-  <text x="470" y="307" text-anchor="end" class="legend-value">4.8%</text>
+  <text x="52" y="307" class="legend-text">Python</text>
+  <text x="470" y="307" text-anchor="end" class="legend-value">5.0%</text>
   <rect x="30" y="320" width="15" height="15" fill="#b07219"/>
-  <text x="52" y="332" class="legend-text">CSS</text>
+  <text x="52" y="332" class="legend-text">HTML</text>
   <text x="470" y="332" text-anchor="end" class="legend-value">4.8%</text>
   <rect x="30" y="345" width="15" height="15" fill="#00ADD8"/>
-  <text x="52" y="357" class="legend-text">TypeScript</text>
-  <text x="470" y="357" text-anchor="end" class="legend-value">3.4%</text>
+  <text x="52" y="357" class="legend-text">CSS</text>
+  <text x="470" y="357" text-anchor="end" class="legend-value">4.5%</text>
   <rect x="30" y="370" width="15" height="15" fill="#89e051"/>
-  <text x="52" y="382" class="legend-text">Blade</text>
-  <text x="470" y="382" text-anchor="end" class="legend-value">3.3%</text>
+  <text x="52" y="382" class="legend-text">TypeScript</text>
+  <text x="470" y="382" text-anchor="end" class="legend-value">3.1%</text>
   <rect x="30" y="395" width="15" height="15" fill="#f34b7d"/>
-  <text x="52" y="407" class="legend-text">Vue</text>
-  <text x="470" y="407" text-anchor="end" class="legend-value">2.0%</text>
+  <text x="52" y="407" class="legend-text">Blade</text>
+  <text x="470" y="407" text-anchor="end" class="legend-value">3.0%</text>
 </svg>
