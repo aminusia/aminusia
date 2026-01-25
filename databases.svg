@@ -8,21 +8,21 @@
   </style>
 
   <text x="250" y="30" text-anchor="middle" class="chart-title">Database Distribution</text>
-  <path class="slice" d="M 250 80 A 100 100 0 1 1 230.08140148961635 277.9961705036587 L 238.0488408937698 238.7977023021952 A 60 60 0 1 0 250 120 Z" fill="#4db33d"/>
-  <path class="slice" d="M 230.08140148961635 277.9961705036587 A 100 100 0 0 1 162.30500717933285 131.94182448133165 L 197.38300430759972 151.16509468879897 A 60 60 0 0 0 238.0488408937698 238.7977023021952 Z" fill="#00758f"/>
-  <path class="slice" d="M 162.30500717933285 131.94182448133165 A 100 100 0 0 1 199.0383357408083 93.95984207398604 L 219.42300144448498 128.37590524439162 A 60 60 0 0 0 197.38300430759972 151.16509468879897 Z" fill="#336791"/>
-  <path class="slice" d="M 199.0383357408083 93.95984207398604 A 100 100 0 0 1 249.99999999999997 80 L 250 120 A 60 60 0 0 0 219.42300144448498 128.37590524439162 Z" fill="#dc382d"/>
+  <path class="slice" d="M 250 80 A 100 100 0 1 1 218.48917819763798 274.9055747010669 L 231.0935069185828 236.94334482064014 A 60 60 0 1 0 250 120 Z" fill="#4db33d"/>
+  <path class="slice" d="M 218.48917819763798 274.9055747010669 A 100 100 0 0 1 164.48572369946532 128.16074316894762 L 198.6914342196792 148.89644590136857 A 60 60 0 0 0 231.0935069185828 236.94334482064014 Z" fill="#00758f"/>
+  <path class="slice" d="M 164.48572369946532 128.16074316894762 A 100 100 0 0 1 200.92824479960615 92.8681295876611 L 220.5569468797637 127.72087775259666 A 60 60 0 0 0 198.6914342196792 148.89644590136857 Z" fill="#336791"/>
+  <path class="slice" d="M 200.92824479960615 92.8681295876611 A 100 100 0 0 1 249.9999999999999 80 L 249.99999999999994 120 A 60 60 0 0 0 220.5569468797637 127.72087775259666 Z" fill="#dc382d"/>
   <circle cx="250" cy="180" r="60" fill="white"/>
   <rect x="30" y="220" width="15" height="15" fill="#4db33d"/>
   <text x="52" y="232" class="legend-text">MySQL</text>
-  <text x="470" y="232" text-anchor="end" class="legend-value">53.2%</text>
+  <text x="470" y="232" text-anchor="end" class="legend-value">55.1%</text>
   <rect x="30" y="245" width="15" height="15" fill="#00758f"/>
   <text x="52" y="257" class="legend-text">MongoDB</text>
-  <text x="470" y="257" text-anchor="end" class="legend-value">29.8%</text>
+  <text x="470" y="257" text-anchor="end" class="legend-value">28.6%</text>
   <rect x="30" y="270" width="15" height="15" fill="#336791"/>
   <text x="52" y="282" class="legend-text">SQLite</text>
-  <text x="470" y="282" text-anchor="end" class="legend-value">8.5%</text>
+  <text x="470" y="282" text-anchor="end" class="legend-value">8.2%</text>
   <rect x="30" y="295" width="15" height="15" fill="#dc382d"/>
   <text x="52" y="307" class="legend-text">Redis</text>
-  <text x="470" y="307" text-anchor="end" class="legend-value">8.5%</text>
+  <text x="470" y="307" text-anchor="end" class="legend-value">8.2%</text>
 </svg>
