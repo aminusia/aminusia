@@ -8,13 +8,13 @@
   </style>
 
   <text x="250" y="30" text-anchor="middle" class="chart-title">Repository Statistics</text>
-  <path class="slice" d="M 250 80 A 100 100 0 0 1 348.308999261811 161.6876909118144 L 308.98539955708657 169.01261454708865 A 60 60 0 0 0 250 120 Z" fill="#3b82f6"/>
-  <path class="slice" d="M 348.308999261811 161.6876909118144 A 100 100 0 1 1 249.99999999999997 80 L 250 120 A 60 60 0 1 0 308.98539955708657 169.01261454708865 Z" fill="#8b5cf6"/>
+  <path class="slice" d="M 250 80 A 100 100 0 0 1 348.718178341445 164.0400104966621 L 309.230907004867 170.42400629799724 A 60 60 0 0 0 250 120 Z" fill="#3b82f6"/>
+  <path class="slice" d="M 348.718178341445 164.0400104966621 A 100 100 0 1 1 249.99999999999997 80 L 250 120 A 60 60 0 1 0 309.230907004867 170.42400629799724 Z" fill="#8b5cf6"/>
   <circle cx="250" cy="180" r="60" fill="white"/>
   <rect x="30" y="220" width="15" height="15" fill="#3b82f6"/>
   <text x="52" y="232" class="legend-text">Public</text>
-  <text x="470" y="232" text-anchor="end" class="legend-value">22.1%</text>
+  <text x="470" y="232" text-anchor="end" class="legend-value">22.4%</text>
   <rect x="30" y="245" width="15" height="15" fill="#8b5cf6"/>
   <text x="52" y="257" class="legend-text">Private</text>
-  <text x="470" y="257" text-anchor="end" class="legend-value">77.9%</text>
+  <text x="470" y="257" text-anchor="end" class="legend-value">77.6%</text>
 </svg>
